@@ -1,0 +1,11 @@
+C:\Users\joses\Documents\GitHub\rentaUNED\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\joses\Documents\GitHub\rentaUNED\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\joses\Documents\GitHub\rentaUNED\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\joses\Documents\GitHub\rentaUNED\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\joses\Documents\GitHub\rentaUNED\DataAccess\bin\Debug\Entities.dll
+C:\Users\joses\Documents\GitHub\rentaUNED\DataAccess\bin\Debug\Entities.pdb
+C:\Users\joses\Documents\GitHub\rentaUNED\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\joses\Documents\GitHub\rentaUNED\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\joses\Documents\GitHub\rentaUNED\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\joses\Documents\GitHub\rentaUNED\DataAccess\bin\Debug\Utils.dll
+C:\Users\joses\Documents\GitHub\rentaUNED\DataAccess\bin\Debug\Utils.pdb
