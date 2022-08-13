@@ -140,6 +140,10 @@
             this.errorProviderVehiculo = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderVehiculoSucursal = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderCobertura = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tabPageServerControl = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonIniciarServer = new System.Windows.Forms.Button();
+            this.buttonDetenerServer = new System.Windows.Forms.Button();
             this.tabControlConsultas.SuspendLayout();
             this.tabConsultarSucursal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaSucursal)).BeginInit();
@@ -173,6 +177,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculoSucursal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCobertura)).BeginInit();
+            this.tabPageServerControl.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlConsultas
@@ -1145,6 +1151,7 @@
             this.mainTabControl.Controls.Add(this.tabRegistrarVehiculo);
             this.mainTabControl.Controls.Add(this.tabRegistrarVehiculoSucursal);
             this.mainTabControl.Controls.Add(this.tabRegistrarCobertura);
+            this.mainTabControl.Controls.Add(this.tabPageServerControl);
             this.mainTabControl.Location = new System.Drawing.Point(0, 0);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
@@ -1319,6 +1326,47 @@
             this.errorProviderCobertura.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderCobertura.ContainerControl = this;
             // 
+            // tabPageServerControl
+            // 
+            this.tabPageServerControl.Controls.Add(this.groupBox2);
+            this.tabPageServerControl.Location = new System.Drawing.Point(4, 22);
+            this.tabPageServerControl.Name = "tabPageServerControl";
+            this.tabPageServerControl.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageServerControl.Size = new System.Drawing.Size(1539, 461);
+            this.tabPageServerControl.TabIndex = 6;
+            this.tabPageServerControl.Text = "Control de servidor";
+            this.tabPageServerControl.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.buttonDetenerServer);
+            this.groupBox2.Controls.Add(this.buttonIniciarServer);
+            this.groupBox2.Location = new System.Drawing.Point(4, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1530, 453);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            // 
+            // buttonIniciarServer
+            // 
+            this.buttonIniciarServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonIniciarServer.Location = new System.Drawing.Point(11, 19);
+            this.buttonIniciarServer.Name = "buttonIniciarServer";
+            this.buttonIniciarServer.Size = new System.Drawing.Size(121, 35);
+            this.buttonIniciarServer.TabIndex = 34;
+            this.buttonIniciarServer.Text = "Registrar";
+            this.buttonIniciarServer.UseVisualStyleBackColor = true;
+            // 
+            // buttonDetenerServer
+            // 
+            this.buttonDetenerServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonDetenerServer.Location = new System.Drawing.Point(138, 19);
+            this.buttonDetenerServer.Name = "buttonDetenerServer";
+            this.buttonDetenerServer.Size = new System.Drawing.Size(121, 35);
+            this.buttonDetenerServer.TabIndex = 35;
+            this.buttonDetenerServer.Text = "Registrar";
+            this.buttonDetenerServer.UseVisualStyleBackColor = true;
+            // 
             // UIServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1368,6 +1416,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculoSucursal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCobertura)).EndInit();
+            this.tabPageServerControl.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1471,6 +1521,10 @@
         private System.Windows.Forms.ErrorProvider errorProviderCobertura;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox textBoxIdVehiculoSucursal;
+        private System.Windows.Forms.TabPage tabPageServerControl;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button buttonDetenerServer;
+        private System.Windows.Forms.Button buttonIniciarServer;
     }
 }
 

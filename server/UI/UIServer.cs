@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Sockets;
+using System.Threading;
+using System.Net;
 using Entities;
 using Utils;
 using DataAccess;
@@ -16,6 +19,9 @@ namespace server
 {
     public partial class UIServer : Form
     {
+        TcpListener tcpListener;
+        Thread subprocessClientListen;
+        bool serverStarted;
         DBOps accesoDatos = new DBOps();
         public UIServer()
         {
