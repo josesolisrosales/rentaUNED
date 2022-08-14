@@ -376,11 +376,25 @@ namespace DataAccess
                         modelo: reader.GetString(2),
                         tipo: ObtenerTipoVehiculoPorId(reader.GetInt32(3)),
                         alquilerDiario: reader.GetInt32(4),
-                        km: reader.GetInt32(5)));
+                        km: reader.GetInt32(5),
+                        asignado: false));
                 }
             }
 
             connection.Close();
+
+            List<VehiculoSucursal> listaVehiculoSucursal = ObtenerVehiculoSucursal();
+
+            foreach (VehiculoSucursal asignacion in listaVehiculoSucursal.ToList())
+            {
+                foreach (Vehiculo vehiculo in listaVehiculos)
+                {
+                    if (asignacion.IdVehiculo == vehiculo.Id)
+                    {
+                        vehiculo.Asignado = true;
+                    }
+                }
+            }
 
             return listaVehiculos;
         }
@@ -471,75 +485,61 @@ namespace DataAccess
             return null;
         }
 
-        public List<Vehiculo> ObtenerVehiculosNoAsignados()
-        {
-            List<Vehiculo> listaVehiculo = ObtenerVehiculos();
-            List<string> listaVehiculosAsignados = ObtenerIDVehiculosAsignados();
+        //public List<Vehiculo> ObtenerVehiculosWithAsignados()
+        //{
+        //    List<Vehiculo> listaVehiculo = ObtenerVehiculos();
+        //    List<VehiculoSucursal> listaVehiculoSucursal = ObtenerVehiculoSucursal();
 
-           foreach(Vehiculo vehiculo in listaVehiculo.ToList())
-            {
-                if (listaVehiculosAsignados.Contains(vehiculo.Id))
-                {
-                    listaVehiculo.Remove(vehiculo);
-                }
-            }
+        //   foreach(VehiculoSucursal asignacion in listaVehiculoSucursal.ToList())
+        //    {
+        //        foreach(Vehiculo vehiculo in listaVehiculo)
+        //        {
+        //            if (asignacion.IdVehiculo == vehiculo.Id)
+        //            {
+        //                vehiculo.Asignado = true;
+        //            }
+        //        }
+        //    }
 
-            foreach(Vehiculo vehiculo in listaVehiculo)
-            {
-                Debug.WriteLine(vehiculo.Id);
-            }
+        //    return listaVehiculo;
+        //}
 
-            return listaVehiculo;
-        }
-
-        public List<string> ObtenerIDVehiculosAsignados()
-        {
-            List <VehiculoSucursal> listaVehiculoSucursal = ObtenerVehiculoSucursal();
-            List<string> idVehiculosAsignados = new List<string>();
-
-            foreach (VehiculoSucursal vehiculoSucursal in listaVehiculoSucursal)
-            {
-                idVehiculosAsignados.Add(vehiculoSucursal.IdVehiculo);
-            }
-
-            return idVehiculosAsignados;
-
-        }
-
-        public List<VehiculoSucursal> ObtenerVehiculoSucursalUnico()
+        public List<Sucursal> ObtenerSucursalesConAsignacion()
         {
             List<VehiculoSucursal> listaVehiculoSucursal = ObtenerVehiculoSucursal();
-            List<int> uniqControl = new List<int>();
+            List<int> IdSucursalUnico = new List<int>();
+            List<Sucursal> sucursalesConAsignacion = new List<Sucursal>();
 
             foreach (VehiculoSucursal vehiculoSucursal in listaVehiculoSucursal.ToList())
             {
-                if (!uniqControl.Contains(vehiculoSucursal.Id))
+                if (!IdSucursalUnico.Contains(vehiculoSucursal.Sucursal.Id))
                 {
-                    uniqControl.Add(vehiculoSucursal.Id);
-                }
-                else
-                {
-                    listaVehiculoSucursal.Remove(vehiculoSucursal);
+                    IdSucursalUnico.Add(vehiculoSucursal.Sucursal.Id);
                 }
             }
 
-            return listaVehiculoSucursal;
+            foreach (int sucursalId in IdSucursalUnico)
+            {
+                sucursalesConAsignacion.Add(ObtenerSucursalporId(sucursalId));
+            }
+
+            return sucursalesConAsignacion;
         }
 
-        public List<VehiculoSucursal> ObtenerVehiculoSucursalPorId(int id)
+        public List<VehiculoSucursal> ObtenerVehiculoSucursalPorSucursal(Sucursal sucursal)
         {
             List<VehiculoSucursal> listaVehiculoSucursal = ObtenerVehiculoSucursal();
-            List<VehiculoSucursal> listaVehiculosucursalPorId = new List<VehiculoSucursal>();
+            List<VehiculoSucursal> listaVehiculosucursalPorSucursal = new List<VehiculoSucursal>();
 
             foreach (VehiculoSucursal vehiculoSucursal in listaVehiculoSucursal)
             {
-                if (vehiculoSucursal.Id == id)
+                if (vehiculoSucursal.Sucursal.Id == sucursal.Id)
                 {
-                    listaVehiculosucursalPorId.Add(vehiculoSucursal);
+                    listaVehiculosucursalPorSucursal.Add(vehiculoSucursal);
                 }
             }
 
-            return listaVehiculosucursalPorId;
+            return listaVehiculosucursalPorSucursal;
         }
 
         public Sucursal ObtenerSucursalporId(int id)
@@ -553,6 +553,13 @@ namespace DataAccess
             }
 
             return null;
+        }
+
+        public int GetNextAsignacionId()
+        {
+            List <VehiculoSucursal> listaVehiculoSucursal= ObtenerVehiculoSucursal();
+
+            return listaVehiculoSucursal.Count + 1;
         }
     }
 }

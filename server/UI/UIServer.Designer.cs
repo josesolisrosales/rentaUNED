@@ -29,28 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlConsultas = new System.Windows.Forms.TabControl();
             this.tabConsultarSucursal = new System.Windows.Forms.TabPage();
             this.dataGridViewConsultaSucursal = new System.Windows.Forms.DataGridView();
             this.tabConsultarCliente = new System.Windows.Forms.TabPage();
             this.dataGridViewConsultaCliente = new System.Windows.Forms.DataGridView();
-            this.tabConsultarTipoVehiculo = new System.Windows.Forms.TabPage();
-            this.dataGridViewConsultaTipoVehiculo = new System.Windows.Forms.DataGridView();
             this.tabConsultarVehiculo = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.dataGridViewConsultaTipoVehiculo = new System.Windows.Forms.DataGridView();
             this.dataGridViewConsultaVehiculo = new System.Windows.Forms.DataGridView();
             this.tabConsultarVehiculoSucursal = new System.Windows.Forms.TabPage();
             this.label24 = new System.Windows.Forms.Label();
@@ -61,8 +64,6 @@
             this.dataGridViewConsultaCoberturas = new System.Windows.Forms.DataGridView();
             this.tabRegistrarVehiculoSucursal = new System.Windows.Forms.TabPage();
             this.groupBoxRegistrarVehiculoSucursal = new System.Windows.Forms.GroupBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBoxIdVehiculoSucursal = new System.Windows.Forms.TextBox();
             this.buttonAsignarVehiculoSucursal = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.dataGridViewVehiculoSucursalVehiculos = new System.Windows.Forms.DataGridView();
@@ -134,24 +135,28 @@
             this.textBoxDescripcionCobertura = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.textBoxIdCobertura = new System.Windows.Forms.TextBox();
+            this.tabPageServerControl = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.listBoxClientsConnected = new System.Windows.Forms.ListBox();
+            this.labelServerStatus = new System.Windows.Forms.Label();
+            this.textBoxServerBitacora = new System.Windows.Forms.TextBox();
+            this.buttonServerStop = new System.Windows.Forms.Button();
+            this.buttonServerStart = new System.Windows.Forms.Button();
             this.errorProviderSucursal = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderCliente = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderTipoVehiculo = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderVehiculo = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderVehiculoSucursal = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderCobertura = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tabPageServerControl = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonIniciarServer = new System.Windows.Forms.Button();
-            this.buttonDetenerServer = new System.Windows.Forms.Button();
+            this.dataGridConsultaVehiculoSucursalDetalles = new System.Windows.Forms.DataGridView();
             this.tabControlConsultas.SuspendLayout();
             this.tabConsultarSucursal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaSucursal)).BeginInit();
             this.tabConsultarCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaCliente)).BeginInit();
-            this.tabConsultarTipoVehiculo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaTipoVehiculo)).BeginInit();
             this.tabConsultarVehiculo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaTipoVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaVehiculo)).BeginInit();
             this.tabConsultarVehiculoSucursal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaVehiculoSucursalVehiculos)).BeginInit();
@@ -171,21 +176,21 @@
             this.mainTabControl.SuspendLayout();
             this.tabRegistrarCobertura.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPageServerControl.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSucursal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTipoVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculoSucursal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCobertura)).BeginInit();
-            this.tabPageServerControl.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridConsultaVehiculoSucursalDetalles)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlConsultas
             // 
             this.tabControlConsultas.Controls.Add(this.tabConsultarSucursal);
             this.tabControlConsultas.Controls.Add(this.tabConsultarCliente);
-            this.tabControlConsultas.Controls.Add(this.tabConsultarTipoVehiculo);
             this.tabControlConsultas.Controls.Add(this.tabConsultarVehiculo);
             this.tabControlConsultas.Controls.Add(this.tabConsultarVehiculoSucursal);
             this.tabControlConsultas.Controls.Add(this.tabPageConsultaCobertura);
@@ -213,23 +218,25 @@
             this.dataGridViewConsultaSucursal.AllowUserToResizeColumns = false;
             this.dataGridViewConsultaSucursal.AllowUserToResizeRows = false;
             this.dataGridViewConsultaSucursal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaSucursal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewConsultaSucursal.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewConsultaSucursal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaSucursal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridViewConsultaSucursal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaSucursal.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaSucursal.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewConsultaSucursal.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewConsultaSucursal.Location = new System.Drawing.Point(4, 7);
             this.dataGridViewConsultaSucursal.Name = "dataGridViewConsultaSucursal";
@@ -256,23 +263,25 @@
             this.dataGridViewConsultaCliente.AllowUserToResizeColumns = false;
             this.dataGridViewConsultaCliente.AllowUserToResizeRows = false;
             this.dataGridViewConsultaCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewConsultaCliente.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewConsultaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridViewConsultaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaCliente.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaCliente.DefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewConsultaCliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewConsultaCliente.Location = new System.Drawing.Point(6, 7);
             this.dataGridViewConsultaCliente.Name = "dataGridViewConsultaCliente";
@@ -281,16 +290,39 @@
             this.dataGridViewConsultaCliente.Size = new System.Drawing.Size(1526, 446);
             this.dataGridViewConsultaCliente.TabIndex = 1;
             // 
-            // tabConsultarTipoVehiculo
+            // tabConsultarVehiculo
             // 
-            this.tabConsultarTipoVehiculo.Controls.Add(this.dataGridViewConsultaTipoVehiculo);
-            this.tabConsultarTipoVehiculo.Location = new System.Drawing.Point(4, 22);
-            this.tabConsultarTipoVehiculo.Name = "tabConsultarTipoVehiculo";
-            this.tabConsultarTipoVehiculo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConsultarTipoVehiculo.Size = new System.Drawing.Size(1539, 461);
-            this.tabConsultarTipoVehiculo.TabIndex = 2;
-            this.tabConsultarTipoVehiculo.Text = "Consultar Tipo de Vehiculo";
-            this.tabConsultarTipoVehiculo.UseVisualStyleBackColor = true;
+            this.tabConsultarVehiculo.Controls.Add(this.label26);
+            this.tabConsultarVehiculo.Controls.Add(this.label25);
+            this.tabConsultarVehiculo.Controls.Add(this.dataGridViewConsultaTipoVehiculo);
+            this.tabConsultarVehiculo.Controls.Add(this.dataGridViewConsultaVehiculo);
+            this.tabConsultarVehiculo.Location = new System.Drawing.Point(4, 22);
+            this.tabConsultarVehiculo.Name = "tabConsultarVehiculo";
+            this.tabConsultarVehiculo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabConsultarVehiculo.Size = new System.Drawing.Size(1539, 461);
+            this.tabConsultarVehiculo.TabIndex = 3;
+            this.tabConsultarVehiculo.Text = "Consultar Vehículo";
+            this.tabConsultarVehiculo.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label26.Location = new System.Drawing.Point(3, 3);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(208, 25);
+            this.label26.TabIndex = 5;
+            this.label26.Text = "Consulta de Vehículos";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label25.Location = new System.Drawing.Point(955, 3);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(279, 25);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "Consulta de Tipo de Vehículos";
             // 
             // dataGridViewConsultaTipoVehiculo
             // 
@@ -299,41 +331,32 @@
             this.dataGridViewConsultaTipoVehiculo.AllowUserToResizeColumns = false;
             this.dataGridViewConsultaTipoVehiculo.AllowUserToResizeRows = false;
             this.dataGridViewConsultaTipoVehiculo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaTipoVehiculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewConsultaTipoVehiculo.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewConsultaTipoVehiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaTipoVehiculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridViewConsultaTipoVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaTipoVehiculo.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaTipoVehiculo.DefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridViewConsultaTipoVehiculo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridViewConsultaTipoVehiculo.Location = new System.Drawing.Point(6, 7);
+            this.dataGridViewConsultaTipoVehiculo.Location = new System.Drawing.Point(960, 59);
             this.dataGridViewConsultaTipoVehiculo.Name = "dataGridViewConsultaTipoVehiculo";
             this.dataGridViewConsultaTipoVehiculo.ReadOnly = true;
             this.dataGridViewConsultaTipoVehiculo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewConsultaTipoVehiculo.Size = new System.Drawing.Size(1526, 446);
-            this.dataGridViewConsultaTipoVehiculo.TabIndex = 2;
-            // 
-            // tabConsultarVehiculo
-            // 
-            this.tabConsultarVehiculo.Controls.Add(this.dataGridViewConsultaVehiculo);
-            this.tabConsultarVehiculo.Location = new System.Drawing.Point(4, 22);
-            this.tabConsultarVehiculo.Name = "tabConsultarVehiculo";
-            this.tabConsultarVehiculo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConsultarVehiculo.Size = new System.Drawing.Size(1539, 461);
-            this.tabConsultarVehiculo.TabIndex = 3;
-            this.tabConsultarVehiculo.Text = "Consultar Vehiculo";
-            this.tabConsultarVehiculo.UseVisualStyleBackColor = true;
+            this.dataGridViewConsultaTipoVehiculo.Size = new System.Drawing.Size(570, 393);
+            this.dataGridViewConsultaTipoVehiculo.TabIndex = 3;
             // 
             // dataGridViewConsultaVehiculo
             // 
@@ -342,33 +365,36 @@
             this.dataGridViewConsultaVehiculo.AllowUserToResizeColumns = false;
             this.dataGridViewConsultaVehiculo.AllowUserToResizeRows = false;
             this.dataGridViewConsultaVehiculo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaVehiculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewConsultaVehiculo.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewConsultaVehiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaVehiculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridViewConsultaVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaVehiculo.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaVehiculo.DefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridViewConsultaVehiculo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridViewConsultaVehiculo.Location = new System.Drawing.Point(6, 7);
+            this.dataGridViewConsultaVehiculo.Location = new System.Drawing.Point(6, 59);
             this.dataGridViewConsultaVehiculo.Name = "dataGridViewConsultaVehiculo";
             this.dataGridViewConsultaVehiculo.ReadOnly = true;
             this.dataGridViewConsultaVehiculo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewConsultaVehiculo.Size = new System.Drawing.Size(1526, 446);
+            this.dataGridViewConsultaVehiculo.Size = new System.Drawing.Size(948, 394);
             this.dataGridViewConsultaVehiculo.TabIndex = 2;
             // 
             // tabConsultarVehiculoSucursal
             // 
+            this.tabConsultarVehiculoSucursal.Controls.Add(this.dataGridConsultaVehiculoSucursalDetalles);
             this.tabConsultarVehiculoSucursal.Controls.Add(this.label24);
             this.tabConsultarVehiculoSucursal.Controls.Add(this.label23);
             this.tabConsultarVehiculoSucursal.Controls.Add(this.comboBoxConsultaSucursalVehiculo);
@@ -378,7 +404,7 @@
             this.tabConsultarVehiculoSucursal.Padding = new System.Windows.Forms.Padding(3);
             this.tabConsultarVehiculoSucursal.Size = new System.Drawing.Size(1539, 461);
             this.tabConsultarVehiculoSucursal.TabIndex = 4;
-            this.tabConsultarVehiculoSucursal.Text = "Consultar Vehiculo por Sucursal";
+            this.tabConsultarVehiculoSucursal.Text = "Consultar Vehículo por Sucursal";
             this.tabConsultarVehiculoSucursal.UseVisualStyleBackColor = true;
             // 
             // label24
@@ -389,7 +415,7 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(196, 25);
             this.label24.TabIndex = 24;
-            this.label24.Text = "Vehiculos Asignados";
+            this.label24.Text = "Vehículos Asignados";
             // 
             // label23
             // 
@@ -399,7 +425,7 @@
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(443, 25);
             this.label23.TabIndex = 22;
-            this.label23.Text = "Seleccione una asignacion para mostrar los datos";
+            this.label23.Text = "Seleccione una asignación para mostrar los datos";
             // 
             // comboBoxConsultaSucursalVehiculo
             // 
@@ -419,29 +445,31 @@
             this.dataGridViewConsultaVehiculoSucursalVehiculos.AllowUserToResizeColumns = false;
             this.dataGridViewConsultaVehiculoSucursalVehiculos.AllowUserToResizeRows = false;
             this.dataGridViewConsultaVehiculoSucursalVehiculos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaVehiculoSucursalVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewConsultaVehiculoSucursalVehiculos.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewConsultaVehiculoSucursalVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaVehiculoSucursalVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridViewConsultaVehiculoSucursalVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaVehiculoSucursalVehiculos.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaVehiculoSucursalVehiculos.DefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridViewConsultaVehiculoSucursalVehiculos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewConsultaVehiculoSucursalVehiculos.Location = new System.Drawing.Point(486, 43);
             this.dataGridViewConsultaVehiculoSucursalVehiculos.Name = "dataGridViewConsultaVehiculoSucursalVehiculos";
             this.dataGridViewConsultaVehiculoSucursalVehiculos.ReadOnly = true;
             this.dataGridViewConsultaVehiculoSucursalVehiculos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewConsultaVehiculoSucursalVehiculos.Size = new System.Drawing.Size(1044, 412);
+            this.dataGridViewConsultaVehiculoSucursalVehiculos.Size = new System.Drawing.Size(509, 412);
             this.dataGridViewConsultaVehiculoSucursalVehiculos.TabIndex = 1;
             // 
             // tabPageConsultaCobertura
@@ -462,23 +490,25 @@
             this.dataGridViewConsultaCoberturas.AllowUserToResizeColumns = false;
             this.dataGridViewConsultaCoberturas.AllowUserToResizeRows = false;
             this.dataGridViewConsultaCoberturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaCoberturas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewConsultaCoberturas.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewConsultaCoberturas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaCoberturas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridViewConsultaCoberturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaCoberturas.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaCoberturas.DefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridViewConsultaCoberturas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewConsultaCoberturas.Location = new System.Drawing.Point(0, 6);
             this.dataGridViewConsultaCoberturas.Name = "dataGridViewConsultaCoberturas";
@@ -495,13 +525,11 @@
             this.tabRegistrarVehiculoSucursal.Padding = new System.Windows.Forms.Padding(3);
             this.tabRegistrarVehiculoSucursal.Size = new System.Drawing.Size(1539, 461);
             this.tabRegistrarVehiculoSucursal.TabIndex = 4;
-            this.tabRegistrarVehiculoSucursal.Text = "Registrar Vehiculo por Sucursal";
+            this.tabRegistrarVehiculoSucursal.Text = "Registrar Vehículo por Sucursal";
             this.tabRegistrarVehiculoSucursal.UseVisualStyleBackColor = true;
             // 
             // groupBoxRegistrarVehiculoSucursal
             // 
-            this.groupBoxRegistrarVehiculoSucursal.Controls.Add(this.label29);
-            this.groupBoxRegistrarVehiculoSucursal.Controls.Add(this.textBoxIdVehiculoSucursal);
             this.groupBoxRegistrarVehiculoSucursal.Controls.Add(this.buttonAsignarVehiculoSucursal);
             this.groupBoxRegistrarVehiculoSucursal.Controls.Add(this.label22);
             this.groupBoxRegistrarVehiculoSucursal.Controls.Add(this.dataGridViewVehiculoSucursalVehiculos);
@@ -513,33 +541,16 @@
             this.groupBoxRegistrarVehiculoSucursal.TabIndex = 1;
             this.groupBoxRegistrarVehiculoSucursal.TabStop = false;
             // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label29.Location = new System.Drawing.Point(11, 110);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(31, 25);
-            this.label29.TabIndex = 27;
-            this.label29.Text = "ID";
-            // 
-            // textBoxIdVehiculoSucursal
-            // 
-            this.textBoxIdVehiculoSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxIdVehiculoSucursal.Location = new System.Drawing.Point(11, 81);
-            this.textBoxIdVehiculoSucursal.Name = "textBoxIdVehiculoSucursal";
-            this.textBoxIdVehiculoSucursal.Size = new System.Drawing.Size(121, 26);
-            this.textBoxIdVehiculoSucursal.TabIndex = 26;
-            // 
             // buttonAsignarVehiculoSucursal
             // 
-            this.buttonAsignarVehiculoSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.buttonAsignarVehiculoSucursal.Location = new System.Drawing.Point(657, 358);
+            this.buttonAsignarVehiculoSucursal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAsignarVehiculoSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonAsignarVehiculoSucursal.Location = new System.Drawing.Point(798, 365);
             this.buttonAsignarVehiculoSucursal.Name = "buttonAsignarVehiculoSucursal";
-            this.buttonAsignarVehiculoSucursal.Size = new System.Drawing.Size(222, 87);
-            this.buttonAsignarVehiculoSucursal.TabIndex = 24;
-            this.buttonAsignarVehiculoSucursal.Text = "Realizar Asignacion";
-            this.buttonAsignarVehiculoSucursal.UseVisualStyleBackColor = true;
+            this.buttonAsignarVehiculoSucursal.Size = new System.Drawing.Size(250, 80);
+            this.buttonAsignarVehiculoSucursal.TabIndex = 2;
+            this.buttonAsignarVehiculoSucursal.Text = "Realizar Asignación";
+            this.buttonAsignarVehiculoSucursal.UseVisualStyleBackColor = false;
             this.buttonAsignarVehiculoSucursal.Click += new System.EventHandler(this.buttonAsignarVehiculoSucursal_Click);
             // 
             // label22
@@ -555,27 +566,29 @@
             // 
             // dataGridViewVehiculoSucursalVehiculos
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewVehiculoSucursalVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridViewVehiculoSucursalVehiculos.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewVehiculoSucursalVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewVehiculoSucursalVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridViewVehiculoSucursalVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewVehiculoSucursalVehiculos.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewVehiculoSucursalVehiculos.DefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridViewVehiculoSucursalVehiculos.Location = new System.Drawing.Point(263, 47);
             this.dataGridViewVehiculoSucursalVehiculos.Name = "dataGridViewVehiculoSucursalVehiculos";
             this.dataGridViewVehiculoSucursalVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewVehiculoSucursalVehiculos.Size = new System.Drawing.Size(388, 398);
+            this.dataGridViewVehiculoSucursalVehiculos.Size = new System.Drawing.Size(529, 398);
             this.dataGridViewVehiculoSucursalVehiculos.TabIndex = 22;
             // 
             // label21
@@ -596,7 +609,7 @@
             this.comboBoxSucursalesDisponibles.Location = new System.Drawing.Point(11, 47);
             this.comboBoxSucursalesDisponibles.Name = "comboBoxSucursalesDisponibles";
             this.comboBoxSucursalesDisponibles.Size = new System.Drawing.Size(246, 28);
-            this.comboBoxSucursalesDisponibles.TabIndex = 20;
+            this.comboBoxSucursalesDisponibles.TabIndex = 0;
             // 
             // tabRegistrarVehiculo
             // 
@@ -606,7 +619,7 @@
             this.tabRegistrarVehiculo.Padding = new System.Windows.Forms.Padding(3);
             this.tabRegistrarVehiculo.Size = new System.Drawing.Size(1539, 461);
             this.tabRegistrarVehiculo.TabIndex = 3;
-            this.tabRegistrarVehiculo.Text = "Registrar Vehiculo";
+            this.tabRegistrarVehiculo.Text = "Registrar Vehículo";
             this.tabRegistrarVehiculo.UseVisualStyleBackColor = true;
             // 
             // groupBoxRegistrarVehiculo
@@ -634,7 +647,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label20.Location = new System.Drawing.Point(144, 214);
+            this.label20.Location = new System.Drawing.Point(144, 155);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(109, 25);
             this.label20.TabIndex = 23;
@@ -643,47 +656,48 @@
             // textBoxVehiculoKilometraje
             // 
             this.textBoxVehiculoKilometraje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxVehiculoKilometraje.Location = new System.Drawing.Point(144, 185);
+            this.textBoxVehiculoKilometraje.Location = new System.Drawing.Point(149, 183);
             this.textBoxVehiculoKilometraje.Name = "textBoxVehiculoKilometraje";
             this.textBoxVehiculoKilometraje.Size = new System.Drawing.Size(121, 26);
-            this.textBoxVehiculoKilometraje.TabIndex = 22;
+            this.textBoxVehiculoKilometraje.TabIndex = 4;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(6, 329);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 35);
-            this.button2.TabIndex = 21;
+            this.button2.Size = new System.Drawing.Size(170, 60);
+            this.button2.TabIndex = 6;
             this.button2.Text = "Registrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.buttonRegistrarVehiculo_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label13.Location = new System.Drawing.Point(6, 273);
+            this.label13.Location = new System.Drawing.Point(276, 155);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(197, 25);
             this.label13.TabIndex = 20;
-            this.label13.Text = "Tipo de Vehiculo (ID)";
+            this.label13.Text = "Tipo de Vehículo (ID)";
             // 
             // comboBoxVehiculoTipo
             // 
             this.comboBoxVehiculoTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxVehiculoTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBoxVehiculoTipo.FormattingEnabled = true;
-            this.comboBoxVehiculoTipo.Location = new System.Drawing.Point(6, 242);
+            this.comboBoxVehiculoTipo.Location = new System.Drawing.Point(276, 183);
             this.comboBoxVehiculoTipo.Name = "comboBoxVehiculoTipo";
-            this.comboBoxVehiculoTipo.Size = new System.Drawing.Size(121, 28);
-            this.comboBoxVehiculoTipo.TabIndex = 19;
+            this.comboBoxVehiculoTipo.Size = new System.Drawing.Size(197, 28);
+            this.comboBoxVehiculoTipo.TabIndex = 5;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label14.Location = new System.Drawing.Point(6, 214);
+            this.label14.Location = new System.Drawing.Point(6, 155);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(132, 25);
             this.label14.TabIndex = 18;
@@ -692,16 +706,16 @@
             // textBoxVehiculoAlquilerDiario
             // 
             this.textBoxVehiculoAlquilerDiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxVehiculoAlquilerDiario.Location = new System.Drawing.Point(6, 185);
+            this.textBoxVehiculoAlquilerDiario.Location = new System.Drawing.Point(11, 183);
             this.textBoxVehiculoAlquilerDiario.Name = "textBoxVehiculoAlquilerDiario";
             this.textBoxVehiculoAlquilerDiario.Size = new System.Drawing.Size(121, 26);
-            this.textBoxVehiculoAlquilerDiario.TabIndex = 17;
+            this.textBoxVehiculoAlquilerDiario.TabIndex = 3;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label17.Location = new System.Drawing.Point(6, 157);
+            this.label17.Location = new System.Drawing.Point(144, 88);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 25);
             this.label17.TabIndex = 16;
@@ -710,16 +724,16 @@
             // textBoxVehiculoModelo
             // 
             this.textBoxVehiculoModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxVehiculoModelo.Location = new System.Drawing.Point(6, 128);
+            this.textBoxVehiculoModelo.Location = new System.Drawing.Point(149, 116);
             this.textBoxVehiculoModelo.Name = "textBoxVehiculoModelo";
             this.textBoxVehiculoModelo.Size = new System.Drawing.Size(121, 26);
-            this.textBoxVehiculoModelo.TabIndex = 15;
+            this.textBoxVehiculoModelo.TabIndex = 2;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label18.Location = new System.Drawing.Point(6, 100);
+            this.label18.Location = new System.Drawing.Point(6, 88);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(67, 25);
             this.label18.TabIndex = 14;
@@ -728,16 +742,16 @@
             // textBoxVehiculoMarca
             // 
             this.textBoxVehiculoMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxVehiculoMarca.Location = new System.Drawing.Point(6, 71);
+            this.textBoxVehiculoMarca.Location = new System.Drawing.Point(11, 116);
             this.textBoxVehiculoMarca.Name = "textBoxVehiculoMarca";
             this.textBoxVehiculoMarca.Size = new System.Drawing.Size(121, 26);
-            this.textBoxVehiculoMarca.TabIndex = 13;
+            this.textBoxVehiculoMarca.TabIndex = 1;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label19.Location = new System.Drawing.Point(6, 43);
+            this.label19.Location = new System.Drawing.Point(6, 16);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(31, 25);
             this.label19.TabIndex = 12;
@@ -746,10 +760,10 @@
             // textBoxVehiculoID
             // 
             this.textBoxVehiculoID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxVehiculoID.Location = new System.Drawing.Point(6, 14);
+            this.textBoxVehiculoID.Location = new System.Drawing.Point(11, 44);
             this.textBoxVehiculoID.Name = "textBoxVehiculoID";
             this.textBoxVehiculoID.Size = new System.Drawing.Size(121, 26);
-            this.textBoxVehiculoID.TabIndex = 11;
+            this.textBoxVehiculoID.TabIndex = 0;
             // 
             // tabRegistrarTipoVehiculo
             // 
@@ -759,7 +773,7 @@
             this.tabRegistrarTipoVehiculo.Padding = new System.Windows.Forms.Padding(3);
             this.tabRegistrarTipoVehiculo.Size = new System.Drawing.Size(1539, 461);
             this.tabRegistrarTipoVehiculo.TabIndex = 2;
-            this.tabRegistrarTipoVehiculo.Text = "Registrar Tipo de Vehiculo";
+            this.tabRegistrarTipoVehiculo.Text = "Registrar Tipo de Vehículo";
             this.tabRegistrarTipoVehiculo.UseVisualStyleBackColor = true;
             // 
             // groupBoxRegistrarTipovehiculo
@@ -779,20 +793,21 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(6, 330);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 35);
-            this.button1.TabIndex = 21;
+            this.button1.Size = new System.Drawing.Size(170, 60);
+            this.button1.TabIndex = 3;
             this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.buttonRegistrarTipoVehiculo_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label12.Location = new System.Drawing.Point(6, 160);
+            this.label12.Location = new System.Drawing.Point(6, 162);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(206, 25);
             this.label12.TabIndex = 20;
@@ -806,34 +821,34 @@
             this.comboBoxTipoVehiculoEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.comboBoxTipoVehiculoEstado.Location = new System.Drawing.Point(6, 129);
+            this.comboBoxTipoVehiculoEstado.Location = new System.Drawing.Point(11, 190);
             this.comboBoxTipoVehiculoEstado.Name = "comboBoxTipoVehiculoEstado";
             this.comboBoxTipoVehiculoEstado.Size = new System.Drawing.Size(121, 28);
-            this.comboBoxTipoVehiculoEstado.TabIndex = 19;
+            this.comboBoxTipoVehiculoEstado.TabIndex = 2;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label15.Location = new System.Drawing.Point(6, 101);
+            this.label15.Location = new System.Drawing.Point(6, 82);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(114, 25);
             this.label15.TabIndex = 14;
-            this.label15.Text = "Descripcion";
+            this.label15.Text = "Descripción";
             // 
             // textBoxTipoVehiculoDescripcion
             // 
             this.textBoxTipoVehiculoDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxTipoVehiculoDescripcion.Location = new System.Drawing.Point(6, 72);
+            this.textBoxTipoVehiculoDescripcion.Location = new System.Drawing.Point(11, 110);
             this.textBoxTipoVehiculoDescripcion.Name = "textBoxTipoVehiculoDescripcion";
             this.textBoxTipoVehiculoDescripcion.Size = new System.Drawing.Size(121, 26);
-            this.textBoxTipoVehiculoDescripcion.TabIndex = 13;
+            this.textBoxTipoVehiculoDescripcion.TabIndex = 1;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label16.Location = new System.Drawing.Point(6, 44);
+            this.label16.Location = new System.Drawing.Point(6, 12);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(31, 25);
             this.label16.TabIndex = 12;
@@ -842,10 +857,10 @@
             // textBoxTipoVehiculoID
             // 
             this.textBoxTipoVehiculoID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxTipoVehiculoID.Location = new System.Drawing.Point(6, 15);
+            this.textBoxTipoVehiculoID.Location = new System.Drawing.Point(11, 40);
             this.textBoxTipoVehiculoID.Name = "textBoxTipoVehiculoID";
             this.textBoxTipoVehiculoID.Size = new System.Drawing.Size(121, 26);
-            this.textBoxTipoVehiculoID.TabIndex = 11;
+            this.textBoxTipoVehiculoID.TabIndex = 0;
             // 
             // tabRegistrarCliente
             // 
@@ -883,7 +898,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label11.Location = new System.Drawing.Point(263, 275);
+            this.label11.Location = new System.Drawing.Point(6, 161);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(193, 25);
             this.label11.TabIndex = 23;
@@ -894,33 +909,35 @@
             this.dateTimeClienteDOB.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dateTimeClienteDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeClienteDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeClienteDOB.Location = new System.Drawing.Point(259, 246);
+            this.dateTimeClienteDOB.Location = new System.Drawing.Point(11, 189);
             this.dateTimeClienteDOB.MaxDate = new System.DateTime(2022, 7, 18, 0, 0, 0, 0);
             this.dateTimeClienteDOB.Name = "dateTimeClienteDOB";
-            this.dateTimeClienteDOB.Size = new System.Drawing.Size(106, 26);
-            this.dateTimeClienteDOB.TabIndex = 22;
+            this.dateTimeClienteDOB.Size = new System.Drawing.Size(178, 26);
+            this.dateTimeClienteDOB.TabIndex = 5;
             this.dateTimeClienteDOB.Value = new System.DateTime(2000, 12, 12, 0, 0, 0, 0);
             // 
             // buttonRegistrarCliente
             // 
-            this.buttonRegistrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonRegistrarCliente.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonRegistrarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRegistrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegistrarCliente.Location = new System.Drawing.Point(6, 331);
             this.buttonRegistrarCliente.Name = "buttonRegistrarCliente";
-            this.buttonRegistrarCliente.Size = new System.Drawing.Size(121, 35);
-            this.buttonRegistrarCliente.TabIndex = 21;
+            this.buttonRegistrarCliente.Size = new System.Drawing.Size(170, 60);
+            this.buttonRegistrarCliente.TabIndex = 6;
             this.buttonRegistrarCliente.Text = "Registrar";
-            this.buttonRegistrarCliente.UseVisualStyleBackColor = true;
+            this.buttonRegistrarCliente.UseVisualStyleBackColor = false;
             this.buttonRegistrarCliente.Click += new System.EventHandler(this.buttonRegistrarCliente_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label6.Location = new System.Drawing.Point(6, 275);
+            this.label6.Location = new System.Drawing.Point(205, 161);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(247, 25);
             this.label6.TabIndex = 20;
-            this.label6.Text = "Genero (default masculino)";
+            this.label6.Text = "Género (default masculino)";
             // 
             // comboBoxClienteGenero
             // 
@@ -930,16 +947,16 @@
             this.comboBoxClienteGenero.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.comboBoxClienteGenero.Location = new System.Drawing.Point(6, 244);
+            this.comboBoxClienteGenero.Location = new System.Drawing.Point(210, 189);
             this.comboBoxClienteGenero.Name = "comboBoxClienteGenero";
-            this.comboBoxClienteGenero.Size = new System.Drawing.Size(121, 28);
-            this.comboBoxClienteGenero.TabIndex = 19;
+            this.comboBoxClienteGenero.Size = new System.Drawing.Size(239, 28);
+            this.comboBoxClienteGenero.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label7.Location = new System.Drawing.Point(6, 216);
+            this.label7.Location = new System.Drawing.Point(341, 85);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(167, 25);
             this.label7.TabIndex = 18;
@@ -948,16 +965,16 @@
             // textBoxClienteSegundoAp
             // 
             this.textBoxClienteSegundoAp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxClienteSegundoAp.Location = new System.Drawing.Point(6, 187);
+            this.textBoxClienteSegundoAp.Location = new System.Drawing.Point(346, 113);
             this.textBoxClienteSegundoAp.Name = "textBoxClienteSegundoAp";
-            this.textBoxClienteSegundoAp.Size = new System.Drawing.Size(121, 26);
-            this.textBoxClienteSegundoAp.TabIndex = 17;
+            this.textBoxClienteSegundoAp.Size = new System.Drawing.Size(155, 26);
+            this.textBoxClienteSegundoAp.TabIndex = 3;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label8.Location = new System.Drawing.Point(6, 159);
+            this.label8.Location = new System.Drawing.Point(190, 85);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(143, 25);
             this.label8.TabIndex = 16;
@@ -966,16 +983,16 @@
             // textBoxClientePrimerAp
             // 
             this.textBoxClientePrimerAp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxClientePrimerAp.Location = new System.Drawing.Point(6, 130);
+            this.textBoxClientePrimerAp.Location = new System.Drawing.Point(195, 113);
             this.textBoxClientePrimerAp.Name = "textBoxClientePrimerAp";
-            this.textBoxClientePrimerAp.Size = new System.Drawing.Size(121, 26);
-            this.textBoxClientePrimerAp.TabIndex = 15;
+            this.textBoxClientePrimerAp.Size = new System.Drawing.Size(138, 26);
+            this.textBoxClientePrimerAp.TabIndex = 2;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label9.Location = new System.Drawing.Point(6, 102);
+            this.label9.Location = new System.Drawing.Point(6, 85);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 25);
             this.label9.TabIndex = 14;
@@ -984,16 +1001,16 @@
             // textBoxClienteNombre
             // 
             this.textBoxClienteNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxClienteNombre.Location = new System.Drawing.Point(6, 73);
+            this.textBoxClienteNombre.Location = new System.Drawing.Point(11, 113);
             this.textBoxClienteNombre.Name = "textBoxClienteNombre";
-            this.textBoxClienteNombre.Size = new System.Drawing.Size(121, 26);
-            this.textBoxClienteNombre.TabIndex = 13;
+            this.textBoxClienteNombre.Size = new System.Drawing.Size(178, 26);
+            this.textBoxClienteNombre.TabIndex = 1;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label10.Location = new System.Drawing.Point(6, 45);
+            this.label10.Location = new System.Drawing.Point(6, 16);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 25);
             this.label10.TabIndex = 12;
@@ -1002,10 +1019,10 @@
             // textBoxClienteID
             // 
             this.textBoxClienteID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxClienteID.Location = new System.Drawing.Point(6, 16);
+            this.textBoxClienteID.Location = new System.Drawing.Point(11, 44);
             this.textBoxClienteID.Name = "textBoxClienteID";
-            this.textBoxClienteID.Size = new System.Drawing.Size(121, 26);
-            this.textBoxClienteID.TabIndex = 11;
+            this.textBoxClienteID.Size = new System.Drawing.Size(178, 26);
+            this.textBoxClienteID.TabIndex = 0;
             // 
             // tabRegistrarSucursal
             // 
@@ -1039,20 +1056,21 @@
             // 
             // buttonRegistrarSucursal
             // 
-            this.buttonRegistrarSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.buttonRegistrarSucursal.Location = new System.Drawing.Point(6, 334);
+            this.buttonRegistrarSucursal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonRegistrarSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistrarSucursal.Location = new System.Drawing.Point(6, 344);
             this.buttonRegistrarSucursal.Name = "buttonRegistrarSucursal";
-            this.buttonRegistrarSucursal.Size = new System.Drawing.Size(121, 35);
-            this.buttonRegistrarSucursal.TabIndex = 10;
+            this.buttonRegistrarSucursal.Size = new System.Drawing.Size(170, 60);
+            this.buttonRegistrarSucursal.TabIndex = 5;
             this.buttonRegistrarSucursal.Text = "Registrar";
-            this.buttonRegistrarSucursal.UseVisualStyleBackColor = true;
+            this.buttonRegistrarSucursal.UseVisualStyleBackColor = false;
             this.buttonRegistrarSucursal.Click += new System.EventHandler(this.buttonRegistrarSucursal_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label5.Location = new System.Drawing.Point(6, 278);
+            this.label5.Location = new System.Drawing.Point(6, 223);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(206, 25);
             this.label5.TabIndex = 9;
@@ -1066,52 +1084,52 @@
             this.comboBoxSucursalEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.comboBoxSucursalEstado.Location = new System.Drawing.Point(6, 247);
+            this.comboBoxSucursalEstado.Location = new System.Drawing.Point(11, 251);
             this.comboBoxSucursalEstado.Name = "comboBoxSucursalEstado";
             this.comboBoxSucursalEstado.Size = new System.Drawing.Size(121, 28);
-            this.comboBoxSucursalEstado.TabIndex = 8;
+            this.comboBoxSucursalEstado.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label4.Location = new System.Drawing.Point(6, 219);
+            this.label4.Location = new System.Drawing.Point(133, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 25);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Telefono";
+            this.label4.Text = "Teléfono";
             // 
             // textBoxSucursalTelefono
             // 
             this.textBoxSucursalTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxSucursalTelefono.Location = new System.Drawing.Point(6, 190);
+            this.textBoxSucursalTelefono.Location = new System.Drawing.Point(138, 178);
             this.textBoxSucursalTelefono.Name = "textBoxSucursalTelefono";
             this.textBoxSucursalTelefono.Size = new System.Drawing.Size(121, 26);
-            this.textBoxSucursalTelefono.TabIndex = 6;
+            this.textBoxSucursalTelefono.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label2.Location = new System.Drawing.Point(6, 162);
+            this.label2.Location = new System.Drawing.Point(6, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 25);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Direccion";
+            this.label2.Text = "Dirección";
             // 
             // textBoxSucursalDireccion
             // 
             this.textBoxSucursalDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxSucursalDireccion.Location = new System.Drawing.Point(6, 133);
+            this.textBoxSucursalDireccion.Location = new System.Drawing.Point(11, 178);
             this.textBoxSucursalDireccion.Name = "textBoxSucursalDireccion";
             this.textBoxSucursalDireccion.Size = new System.Drawing.Size(121, 26);
-            this.textBoxSucursalDireccion.TabIndex = 4;
+            this.textBoxSucursalDireccion.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(6, 105);
+            this.label1.Location = new System.Drawing.Point(6, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 25);
             this.label1.TabIndex = 3;
@@ -1120,16 +1138,16 @@
             // textBoxSucursalNombre
             // 
             this.textBoxSucursalNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxSucursalNombre.Location = new System.Drawing.Point(6, 76);
+            this.textBoxSucursalNombre.Location = new System.Drawing.Point(11, 110);
             this.textBoxSucursalNombre.Name = "textBoxSucursalNombre";
             this.textBoxSucursalNombre.Size = new System.Drawing.Size(121, 26);
-            this.textBoxSucursalNombre.TabIndex = 2;
+            this.textBoxSucursalNombre.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label3.Location = new System.Drawing.Point(6, 48);
+            this.label3.Location = new System.Drawing.Point(6, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 25);
             this.label3.TabIndex = 1;
@@ -1138,7 +1156,7 @@
             // textBoxSucursalID
             // 
             this.textBoxSucursalID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxSucursalID.Location = new System.Drawing.Point(6, 19);
+            this.textBoxSucursalID.Location = new System.Drawing.Point(6, 44);
             this.textBoxSucursalID.Name = "textBoxSucursalID";
             this.textBoxSucursalID.Size = new System.Drawing.Size(121, 26);
             this.textBoxSucursalID.TabIndex = 0;
@@ -1192,38 +1210,39 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label27.Location = new System.Drawing.Point(11, 214);
+            this.label27.Location = new System.Drawing.Point(11, 152);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(197, 25);
             this.label27.TabIndex = 36;
-            this.label27.Text = "Tipo de Vehiculo (ID)";
+            this.label27.Text = "Tipo de Vehículo (ID)";
             // 
             // comboBoxTipoVehiculoCobertura
             // 
             this.comboBoxTipoVehiculoCobertura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTipoVehiculoCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBoxTipoVehiculoCobertura.FormattingEnabled = true;
-            this.comboBoxTipoVehiculoCobertura.Location = new System.Drawing.Point(11, 183);
+            this.comboBoxTipoVehiculoCobertura.Location = new System.Drawing.Point(16, 180);
             this.comboBoxTipoVehiculoCobertura.Name = "comboBoxTipoVehiculoCobertura";
-            this.comboBoxTipoVehiculoCobertura.Size = new System.Drawing.Size(121, 28);
-            this.comboBoxTipoVehiculoCobertura.TabIndex = 35;
+            this.comboBoxTipoVehiculoCobertura.Size = new System.Drawing.Size(192, 28);
+            this.comboBoxTipoVehiculoCobertura.TabIndex = 3;
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.button3.Location = new System.Drawing.Point(11, 327);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 35);
-            this.button3.TabIndex = 34;
+            this.button3.Size = new System.Drawing.Size(170, 60);
+            this.button3.TabIndex = 5;
             this.button3.Text = "Registrar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.buttonRegistrarCobertura_Click);
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label28.Location = new System.Drawing.Point(11, 271);
+            this.label28.Location = new System.Drawing.Point(209, 152);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(206, 25);
             this.label28.TabIndex = 33;
@@ -1237,16 +1256,16 @@
             this.comboBoxEstadoCobertura.Items.AddRange(new object[] {
             "activo",
             "inactivo"});
-            this.comboBoxEstadoCobertura.Location = new System.Drawing.Point(11, 240);
+            this.comboBoxEstadoCobertura.Location = new System.Drawing.Point(214, 180);
             this.comboBoxEstadoCobertura.Name = "comboBoxEstadoCobertura";
-            this.comboBoxEstadoCobertura.Size = new System.Drawing.Size(121, 28);
-            this.comboBoxEstadoCobertura.TabIndex = 32;
+            this.comboBoxEstadoCobertura.Size = new System.Drawing.Size(201, 28);
+            this.comboBoxEstadoCobertura.TabIndex = 4;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label30.Location = new System.Drawing.Point(11, 155);
+            this.label30.Location = new System.Drawing.Point(150, 80);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(67, 25);
             this.label30.TabIndex = 29;
@@ -1255,34 +1274,34 @@
             // textBoxMontoCobertura
             // 
             this.textBoxMontoCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxMontoCobertura.Location = new System.Drawing.Point(11, 126);
+            this.textBoxMontoCobertura.Location = new System.Drawing.Point(155, 108);
             this.textBoxMontoCobertura.Name = "textBoxMontoCobertura";
             this.textBoxMontoCobertura.Size = new System.Drawing.Size(121, 26);
-            this.textBoxMontoCobertura.TabIndex = 28;
+            this.textBoxMontoCobertura.TabIndex = 2;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label31.Location = new System.Drawing.Point(11, 98);
+            this.label31.Location = new System.Drawing.Point(11, 80);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(114, 25);
             this.label31.TabIndex = 27;
-            this.label31.Text = "Descripcion";
+            this.label31.Text = "Descripción";
             // 
             // textBoxDescripcionCobertura
             // 
             this.textBoxDescripcionCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxDescripcionCobertura.Location = new System.Drawing.Point(11, 69);
+            this.textBoxDescripcionCobertura.Location = new System.Drawing.Point(16, 108);
             this.textBoxDescripcionCobertura.Name = "textBoxDescripcionCobertura";
             this.textBoxDescripcionCobertura.Size = new System.Drawing.Size(121, 26);
-            this.textBoxDescripcionCobertura.TabIndex = 26;
+            this.textBoxDescripcionCobertura.TabIndex = 1;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label32.Location = new System.Drawing.Point(11, 41);
+            this.label32.Location = new System.Drawing.Point(11, 9);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(31, 25);
             this.label32.TabIndex = 25;
@@ -1291,10 +1310,95 @@
             // textBoxIdCobertura
             // 
             this.textBoxIdCobertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxIdCobertura.Location = new System.Drawing.Point(11, 12);
+            this.textBoxIdCobertura.Location = new System.Drawing.Point(16, 37);
             this.textBoxIdCobertura.Name = "textBoxIdCobertura";
             this.textBoxIdCobertura.Size = new System.Drawing.Size(121, 26);
-            this.textBoxIdCobertura.TabIndex = 24;
+            this.textBoxIdCobertura.TabIndex = 0;
+            // 
+            // tabPageServerControl
+            // 
+            this.tabPageServerControl.Controls.Add(this.groupBox2);
+            this.tabPageServerControl.Location = new System.Drawing.Point(4, 22);
+            this.tabPageServerControl.Name = "tabPageServerControl";
+            this.tabPageServerControl.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageServerControl.Size = new System.Drawing.Size(1539, 461);
+            this.tabPageServerControl.TabIndex = 6;
+            this.tabPageServerControl.Text = "Control de servidor";
+            this.tabPageServerControl.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label29);
+            this.groupBox2.Controls.Add(this.listBoxClientsConnected);
+            this.groupBox2.Controls.Add(this.labelServerStatus);
+            this.groupBox2.Controls.Add(this.textBoxServerBitacora);
+            this.groupBox2.Controls.Add(this.buttonServerStop);
+            this.groupBox2.Controls.Add(this.buttonServerStart);
+            this.groupBox2.Location = new System.Drawing.Point(4, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1530, 453);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label29.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label29.Location = new System.Drawing.Point(762, 81);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(227, 26);
+            this.label29.TabIndex = 39;
+            this.label29.Text = "Clientes conectados";
+            // 
+            // listBoxClientsConnected
+            // 
+            this.listBoxClientsConnected.FormattingEnabled = true;
+            this.listBoxClientsConnected.Location = new System.Drawing.Point(767, 110);
+            this.listBoxClientsConnected.Name = "listBoxClientsConnected";
+            this.listBoxClientsConnected.Size = new System.Drawing.Size(640, 329);
+            this.listBoxClientsConnected.TabIndex = 38;
+            // 
+            // labelServerStatus
+            // 
+            this.labelServerStatus.AutoSize = true;
+            this.labelServerStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.labelServerStatus.ForeColor = System.Drawing.Color.Red;
+            this.labelServerStatus.Location = new System.Drawing.Point(6, 81);
+            this.labelServerStatus.Name = "labelServerStatus";
+            this.labelServerStatus.Size = new System.Drawing.Size(107, 26);
+            this.labelServerStatus.TabIndex = 37;
+            this.labelServerStatus.Text = "Detenido";
+            // 
+            // textBoxServerBitacora
+            // 
+            this.textBoxServerBitacora.Location = new System.Drawing.Point(11, 110);
+            this.textBoxServerBitacora.Multiline = true;
+            this.textBoxServerBitacora.Name = "textBoxServerBitacora";
+            this.textBoxServerBitacora.Size = new System.Drawing.Size(705, 337);
+            this.textBoxServerBitacora.TabIndex = 36;
+            // 
+            // buttonServerStop
+            // 
+            this.buttonServerStop.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonServerStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonServerStop.Location = new System.Drawing.Point(137, 19);
+            this.buttonServerStop.Name = "buttonServerStop";
+            this.buttonServerStop.Size = new System.Drawing.Size(120, 40);
+            this.buttonServerStop.TabIndex = 35;
+            this.buttonServerStop.Text = "Detener";
+            this.buttonServerStop.UseVisualStyleBackColor = false;
+            // 
+            // buttonServerStart
+            // 
+            this.buttonServerStart.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonServerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.buttonServerStart.Location = new System.Drawing.Point(11, 19);
+            this.buttonServerStart.Name = "buttonServerStart";
+            this.buttonServerStart.Size = new System.Drawing.Size(120, 40);
+            this.buttonServerStart.TabIndex = 34;
+            this.buttonServerStart.Text = "Iniciar";
+            this.buttonServerStart.UseVisualStyleBackColor = false;
             // 
             // errorProviderSucursal
             // 
@@ -1326,46 +1430,39 @@
             this.errorProviderCobertura.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderCobertura.ContainerControl = this;
             // 
-            // tabPageServerControl
+            // dataGridConsultaVehiculoSucursalDetalles
             // 
-            this.tabPageServerControl.Controls.Add(this.groupBox2);
-            this.tabPageServerControl.Location = new System.Drawing.Point(4, 22);
-            this.tabPageServerControl.Name = "tabPageServerControl";
-            this.tabPageServerControl.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageServerControl.Size = new System.Drawing.Size(1539, 461);
-            this.tabPageServerControl.TabIndex = 6;
-            this.tabPageServerControl.Text = "Control de servidor";
-            this.tabPageServerControl.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.buttonDetenerServer);
-            this.groupBox2.Controls.Add(this.buttonIniciarServer);
-            this.groupBox2.Location = new System.Drawing.Point(4, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1530, 453);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            // 
-            // buttonIniciarServer
-            // 
-            this.buttonIniciarServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.buttonIniciarServer.Location = new System.Drawing.Point(11, 19);
-            this.buttonIniciarServer.Name = "buttonIniciarServer";
-            this.buttonIniciarServer.Size = new System.Drawing.Size(121, 35);
-            this.buttonIniciarServer.TabIndex = 34;
-            this.buttonIniciarServer.Text = "Registrar";
-            this.buttonIniciarServer.UseVisualStyleBackColor = true;
-            // 
-            // buttonDetenerServer
-            // 
-            this.buttonDetenerServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.buttonDetenerServer.Location = new System.Drawing.Point(138, 19);
-            this.buttonDetenerServer.Name = "buttonDetenerServer";
-            this.buttonDetenerServer.Size = new System.Drawing.Size(121, 35);
-            this.buttonDetenerServer.TabIndex = 35;
-            this.buttonDetenerServer.Text = "Registrar";
-            this.buttonDetenerServer.UseVisualStyleBackColor = true;
+            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToAddRows = false;
+            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToDeleteRows = false;
+            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToResizeColumns = false;
+            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToResizeRows = false;
+            this.dataGridConsultaVehiculoSucursalDetalles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridConsultaVehiculoSucursalDetalles.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridConsultaVehiculoSucursalDetalles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridConsultaVehiculoSucursalDetalles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            this.dataGridConsultaVehiculoSucursalDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridConsultaVehiculoSucursalDetalles.DefaultCellStyle = dataGridViewCellStyle32;
+            this.dataGridConsultaVehiculoSucursalDetalles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridConsultaVehiculoSucursalDetalles.Location = new System.Drawing.Point(1036, 43);
+            this.dataGridConsultaVehiculoSucursalDetalles.Name = "dataGridConsultaVehiculoSucursalDetalles";
+            this.dataGridConsultaVehiculoSucursalDetalles.ReadOnly = true;
+            this.dataGridConsultaVehiculoSucursalDetalles.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridConsultaVehiculoSucursalDetalles.Size = new System.Drawing.Size(494, 410);
+            this.dataGridConsultaVehiculoSucursalDetalles.TabIndex = 25;
             // 
             // UIServer
             // 
@@ -1381,9 +1478,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaSucursal)).EndInit();
             this.tabConsultarCliente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaCliente)).EndInit();
-            this.tabConsultarTipoVehiculo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaTipoVehiculo)).EndInit();
             this.tabConsultarVehiculo.ResumeLayout(false);
+            this.tabConsultarVehiculo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaTipoVehiculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaVehiculo)).EndInit();
             this.tabConsultarVehiculoSucursal.ResumeLayout(false);
             this.tabConsultarVehiculoSucursal.PerformLayout();
@@ -1410,14 +1507,16 @@
             this.tabRegistrarCobertura.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPageServerControl.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSucursal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTipoVehiculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculoSucursal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCobertura)).EndInit();
-            this.tabPageServerControl.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridConsultaVehiculoSucursalDetalles)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1433,7 +1532,6 @@
         private System.Windows.Forms.TabControl tabControlConsultas;
         private System.Windows.Forms.TabPage tabConsultarSucursal;
         private System.Windows.Forms.TabPage tabConsultarCliente;
-        private System.Windows.Forms.TabPage tabConsultarTipoVehiculo;
         private System.Windows.Forms.TabPage tabConsultarVehiculo;
         private System.Windows.Forms.TabPage tabConsultarVehiculoSucursal;
         private System.Windows.Forms.GroupBox groupBoxRegistrarSucursal;
@@ -1491,7 +1589,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderVehiculo;
         private System.Windows.Forms.DataGridView dataGridViewConsultaSucursal;
         private System.Windows.Forms.DataGridView dataGridViewConsultaCliente;
-        private System.Windows.Forms.DataGridView dataGridViewConsultaTipoVehiculo;
         private System.Windows.Forms.DataGridView dataGridViewConsultaVehiculo;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox comboBoxSucursalesDisponibles;
@@ -1519,12 +1616,18 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox textBoxIdCobertura;
         private System.Windows.Forms.ErrorProvider errorProviderCobertura;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBoxIdVehiculoSucursal;
         private System.Windows.Forms.TabPage tabPageServerControl;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button buttonDetenerServer;
-        private System.Windows.Forms.Button buttonIniciarServer;
+        private System.Windows.Forms.Button buttonServerStop;
+        private System.Windows.Forms.Button buttonServerStart;
+        private System.Windows.Forms.TextBox textBoxServerBitacora;
+        private System.Windows.Forms.Label labelServerStatus;
+        private System.Windows.Forms.ListBox listBoxClientsConnected;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DataGridView dataGridViewConsultaTipoVehiculo;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.DataGridView dataGridConsultaVehiculoSucursalDetalles;
     }
 }
 

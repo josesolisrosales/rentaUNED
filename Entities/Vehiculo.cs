@@ -8,6 +8,8 @@
         private TipoVehiculo tipo;
         private int alquilerDiario;
         private int km;
+        private bool asignado;
+
         public Vehiculo()
         { }
 
@@ -17,7 +19,8 @@
             string modelo,
             TipoVehiculo tipo,
             int alquilerDiario,
-            int km
+            int km,
+            bool asignado
             )
         {
             this.id = id;
@@ -26,6 +29,7 @@
             this.tipo = tipo;
             this.alquilerDiario = alquilerDiario;
             this.km = km;
+            this.asignado = asignado;
         }
 
         public string Id
@@ -62,6 +66,12 @@
         {
             set { km = value; }
             get { return km; }
+        }
+
+        public bool Asignado
+        {
+            set { asignado = value; }
+            get { return asignado; }
         }
     }
 }

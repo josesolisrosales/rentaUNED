@@ -16,3 +16,5 @@ C:\Users\joses\Documents\GitHub\rentaUNED\server\bin\Debug\Utils.pdb
 C:\Users\joses\Documents\GitHub\rentaUNED\server\obj\Debug\Server.csproj.CopyComplete
 C:\Users\joses\Documents\GitHub\rentaUNED\server\obj\Debug\server.exe
 C:\Users\joses\Documents\GitHub\rentaUNED\server\obj\Debug\server.pdb
+C:\Users\joses\Documents\GitHub\rentaUNED\server\bin\Debug\Newtonsoft.Json.dll
+C:\Users\joses\Documents\GitHub\rentaUNED\server\bin\Debug\Newtonsoft.Json.xml
