@@ -65,7 +65,6 @@ namespace Client
                         FECHA_FIN = x.FechaFin,
                         MONTO = x.Monto
                     }).ToList();
-                labelInfo.Text = "";
             }
             catch (Exception ex)
             {
@@ -81,7 +80,7 @@ namespace Client
                 int reservaId = Int32.Parse(textBoxReservaId.Text);
                 populateConsultaReservas(reservaId);
 
-            } catch (Exception ex)
+            } catch (FormatException ex)
             {
                 labelInfo.Text = "El ID de la reserva debe ser un numero valido";
                 populateConsultaReservas();

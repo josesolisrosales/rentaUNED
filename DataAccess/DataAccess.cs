@@ -11,6 +11,9 @@ using Utils;
 
 namespace DataAccess
 {
+    // Metodos de acceso a los datos en la base de datos SQL,
+    //SE usan para insertar, y consultar la base de datos con diferentes "filtros" necesarios para el funcionamiento correcto de ciertas funciones del servidor y cliente
+
     public class DBOps
     {
 
@@ -20,7 +23,6 @@ namespace DataAccess
         {
             connectionChain = ConfigurationManager.ConnectionStrings["RentaUNEDConexion"].ConnectionString;
         }
-
         public bool Registrar(Cliente cliente)
         {
 

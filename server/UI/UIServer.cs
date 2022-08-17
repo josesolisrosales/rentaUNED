@@ -1166,6 +1166,7 @@ namespace server
 
             serverStreamWriter.WriteLine(JsonConvert.SerializeObject(reservasCliente));
             serverStreamWriter.Flush();
+            textBoxServerBitacora.Invoke(writeToServerLog, new object[] { $"Cliente con el ID: {clientId} ha solicitado consultar sus reservas" });
         }
         private void actualizarConsultas()
         {

@@ -101,5 +101,10 @@ namespace Client
             consultarReservasForm.StartPosition = FormStartPosition.CenterScreen;
             consultarReservasForm.ShowDialog();
         }
+
+        private void UIClient_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ClientTCP.Disconnect(textBoxClientId.Text);
+        }
     }
 }

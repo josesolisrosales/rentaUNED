@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Entities
 {
     /// <summary>
-    /// Esta clase facilita la comunicacion cliente-servidor
+    /// Esta clase facilita la comunicacion cliente-servidor, basada en ejemplo visto durante tutoria
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class SocketMsg<T>

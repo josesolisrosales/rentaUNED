@@ -142,6 +142,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "UIClient";
             this.Text = "Renta UNED Cliente";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UIClient_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
