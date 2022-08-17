@@ -27,6 +27,7 @@ namespace server
         DBOps accesoDatos;
         writeToTextBoxDelegate writeToServerLog;
         modifyListBoxDelegate modifyServerListBox;
+        bool dbBusy;
 
         public UIServer()
         {
@@ -35,6 +36,7 @@ namespace server
             accesoDatos = new DBOps();
             writeToServerLog = new writeToTextBoxDelegate(writeToTextBox);
             modifyServerListBox = new modifyListBoxDelegate(modifyListBox);
+            dbBusy = false;
 
             actualizarConsultas();
         }
@@ -52,7 +54,8 @@ namespace server
             if (add)
             {
                 listBoxClientsConnected.Items.Add(text);
-            } else
+            }
+            else
             {
                 listBoxClientsConnected.Items.Remove(text);
             }
@@ -92,7 +95,7 @@ namespace server
             {
                 MessageBox.Show($"Hubo un error al registrar la sucursal con el id {id}, revise la consola para encontrar el error completo", "ERROR");
             }
-         
+
             textBoxSucursalID.Clear();
             textBoxSucursalNombre.Clear();
             textBoxSucursalTelefono.Clear();
@@ -346,7 +349,8 @@ namespace server
                 MessageBox.Show($"Tipo de vehiculo con el ID {id} registrado en la base de datos", "Tipo de Vehiculo Registrado");
 
                 actualizarConsultaTipoVehiculo();
-            } else
+            }
+            else
             {
                 MessageBox.Show($"Hubo un error al registrar el tipo de vehiculo con el id {id}, revise la consola para encontrar el error completo", "ERROR");
             }
@@ -362,7 +366,7 @@ namespace server
 
             List<TipoVehiculo> listaTipoVehiculos = accesoDatos.ObtenerTipoVehiculos();
 
-            dataGridViewConsultaTipoVehiculo.DataSource =listaTipoVehiculos.Where(x => x != null).Select((x, index) =>
+            dataGridViewConsultaTipoVehiculo.DataSource = listaTipoVehiculos.Where(x => x != null).Select((x, index) =>
                 new
                 {
                     ID = x.Id,
@@ -378,9 +382,8 @@ namespace server
                     item.Text = $"{tipoVehiculo.Descripcion}";
                     item.Value = tipoVehiculo;
 
-                    comboBoxConsultaSucursalVehiculo.Items.Add(item);
-                    comboBoxVehiculoTipo.Items.Add(tipoVehiculo.Id);
-                    comboBoxTipoVehiculoCobertura.Items.Add(tipoVehiculo.Id);
+                    comboBoxVehiculoTipo.Items.Add(item);
+                    comboBoxTipoVehiculoCobertura.Items.Add(item);
                 }
             }
         }
@@ -434,7 +437,7 @@ namespace server
             string id = textBoxVehiculoID.Text;
             string marca = textBoxVehiculoMarca.Text;
             string modelo = textBoxVehiculoModelo.Text;
-            int tipoVehiculoId = ((comboBoxVehiculoTipo.SelectedItem as CustomComboBoxItem).Value as TipoVehiculo).Id;
+            TipoVehiculo tipoVehiculo = ((comboBoxVehiculoTipo.SelectedItem as CustomComboBoxItem).Value as TipoVehiculo);
 
             foreach (Vehiculo vehiculo in accesoDatos.ObtenerVehiculos())
             {
@@ -448,7 +451,7 @@ namespace server
             Vehiculo nuevoVehiculo = new Vehiculo(id: id,
                 marca: marca,
                 modelo: modelo,
-                tipo: accesoDatos.ObtenerTipoVehiculoPorId(tipoVehiculoId),
+                tipo: tipoVehiculo,
                 alquilerDiario: alquilerDiario,
                 km: kilometraje,
                 asignado: false);
@@ -646,7 +649,7 @@ namespace server
                 foreach (Sucursal sucursal in sucursalesConAsignacion)
                 {
                     CustomComboBoxItem item = new CustomComboBoxItem();
-                    item.Text = $"ID:{sucursal.Id}, Nombre:{sucursal.Nombre}, Direccion:{sucursal.Direccion}";
+                    item.Text = $"ID: {sucursal.Id}, Nombre: {sucursal.Nombre}, Direccion: {sucursal.Direccion}";
                     item.Value = sucursal;
 
                     comboBoxConsultaSucursalVehiculo.Items.Add(item);
@@ -673,13 +676,12 @@ namespace server
             dataGridViewConsultaVehiculoSucursalVehiculos.DataSource = listaVehiculoSucursalPorSucursal.Where(x => x != null).Select((x) =>
                 new
                 {
-                    ID = x.Id,
+                    ID_ASIGNACION = x.Id,
                     FECHA = x.Fecha,
                     ID_VEHICULO = x.IdVehiculo,
-                    ID_SUCURSAL = x.Sucursal.Id
                 }).ToList();
 
-            foreach(VehiculoSucursal asignacion in listaVehiculoSucursalPorSucursal)
+            foreach (VehiculoSucursal asignacion in listaVehiculoSucursalPorSucursal)
             {
                 idVehiculosDeSucursal.Add(asignacion.IdVehiculo);
             }
@@ -687,7 +689,7 @@ namespace server
             dataGridConsultaVehiculoSucursalDetalles.DataSource = listaVehiculos.Where(x => x != null && idVehiculosDeSucursal.Contains(x.Id)).Select((x) =>
                 new
                 {
-                    ID= x.Id,
+                    ID = x.Id,
                     MARCA = x.Marca,
                     MODELO = x.Modelo,
                     TIPO = x.Tipo.Descripcion
@@ -750,7 +752,7 @@ namespace server
             Int32.TryParse(textBoxIdCobertura.Text, out int id);
             string descripcion = textBoxDescripcionCobertura.Text;
             bool estado = Helpers.stringToBool(comboBoxEstadoCobertura.Text);
-            int tipoVehiculoId = ((comboBoxTipoVehiculoCobertura.SelectedItem as CustomComboBoxItem).Value as TipoVehiculo).Id;
+            TipoVehiculo tipoVehiculo = ((comboBoxTipoVehiculoCobertura.SelectedItem as CustomComboBoxItem).Value as TipoVehiculo);
 
             foreach (Cobertura cobertura in accesoDatos.ObtenerCoberturas())
             {
@@ -764,7 +766,7 @@ namespace server
             Cobertura coberturaNueva = new Cobertura(
                 id: id,
                 descripcion: descripcion,
-                tipoVehiculo: accesoDatos.ObtenerTipoVehiculoPorId(tipoVehiculoId),
+                tipoVehiculo: tipoVehiculo,
                 estado: estado,
                 monto: monto);
 
@@ -793,7 +795,7 @@ namespace server
                     DESCRIPCION = x.Descripcion,
                     MONTO = x.Monto,
                     ESTADO = Helpers.boolToString(x.Estado),
-                    TIPO_VEHICULO_ID = x.TipoVehiculo.Id
+                    TIPO_VEHICULO = x.TipoVehiculo.Descripcion
                 }).ToList();
         }
         private void buttonRegistrarCobertura_Click(object sender, EventArgs e)
@@ -870,9 +872,33 @@ namespace server
                 registrarCobertura();
             }
         }
-        
+
+        // Actualizar reservas en aplicacion admin
+
+        private void actualizarConsultaReservas()
+        {
+            try
+            {
+                dataGridViewReservas.DataSource = accesoDatos.ObtenerReservas().Where(x => x != null).Select((x) =>
+                                new
+                                {
+                                    ID = x.Id,
+                                    CLIENTE = x.IdCliente,
+                                    VEHICULO = x.IdVehiculo,
+                                    FECHA_RESERVA = x.FechaReserva.ToShortDateString(),
+                                    FECHA_INICIO = x.FechaInicio.ToShortDateString(),
+                                    FECHA_FIN = x.FechaFin.ToShortDateString(),
+                                    MONTO = x.Monto
+                                }).ToList();
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+        }
+
         // Logica Servidor
-        private void buttonServerStart_Click()
+        private void buttonServerStart_Click(object sender, EventArgs e)
         {
             IPAddress local = IPAddress.Parse("127.0.0.1");
             tcpListener = new TcpListener(local, 14100);
@@ -886,13 +912,23 @@ namespace server
             buttonServerStart.Enabled = false;
             buttonServerStop.Enabled = true;
 
-            textBoxServerBitacora.Text = "Servidor iniciado y escuchando en direccion 127.0.0.1 puerto 14100";
+            textBoxServerBitacora.Text = $"{DateTime.Now.ToString()}---Servidor iniciado y escuchando en direccion 127.0.0.1 puerto 14100";
             textBoxServerBitacora.AppendText(Environment.NewLine);
 
         }
 
-        private void buttonServerStop_Click()
+        private void buttonServerStop_Click(object sender, EventArgs e)
         {
+            serverStarted = false;
+            tcpListener.Stop();
+
+            labelServerStatus.ForeColor = Color.Red;
+            labelServerStatus.Text = "Detenido";
+            buttonServerStart.Enabled = true;
+            buttonServerStop.Enabled = false;
+            textBoxServerBitacora.AppendText(DateTime.Now.ToString() + "---" + "Servidor Detenido");
+            textBoxServerBitacora.AppendText(Environment.NewLine);
+            listBoxClientsConnected.Items.Clear();
 
         }
 
@@ -907,8 +943,8 @@ namespace server
                     Thread clientThread = new Thread(new ParameterizedThreadStart(clientComm));
                     clientThread.Start(client);
                 }
-            } 
-            catch(Exception)
+            }
+            catch (Exception)
             {
                 return;
             }
@@ -927,7 +963,8 @@ namespace server
                     var msg = reader.ReadLine();
                     SocketMsg<object> msgRecieved = JsonConvert.DeserializeObject<SocketMsg<object>>(msg);
                     methodSelect(msgRecieved.Method, msg, ref serverStreamWriter);
-                } catch (Exception)
+                }
+                catch (Exception)
                 {
                     break;
                 }
@@ -942,37 +979,194 @@ namespace server
             {
                 case "Conectar":
                     SocketMsg<string> mensajeConectar = JsonConvert.DeserializeObject<SocketMsg<string>>(msg);
-                    clientConnect(mensajeConectar.entity);
+                    clientConnect(ref serverStreamWriter, mensajeConectar.Entity);
                     break;
+
                 case "Desconectar":
                     SocketMsg<string> mensajeDesconectar = JsonConvert.DeserializeObject<SocketMsg<string>>(msg);
-                    clientDisconnect(mensajeDesconectar.entity);
+                    clientDisconnect(mensajeDesconectar.Entity);
                     break;
-                case "ValidarId":
+
+                case "ObtenerCliente":
+                    SocketMsg<string> mensajeObtenerCliente = JsonConvert.DeserializeObject<SocketMsg<string>>(msg);
+                    obtenerInfoCliente(ref serverStreamWriter, mensajeObtenerCliente.Entity);
+                    break;
+
                 case "ObtenerSucursales":
+                    obtenerSucursalesClientRequest(ref serverStreamWriter);
+                    break;
+
+                case "LockDb":
+                    SocketMsg<string> mensajeLockDb = JsonConvert.DeserializeObject<SocketMsg<string>>(msg);
+                    lockDb(mensajeLockDb.Entity);
+                    break;
+
+                case "UnlockDb":
+                    SocketMsg<string> mensajeUnlockDb = JsonConvert.DeserializeObject<SocketMsg<string>>(msg);
+                    unlockDb(mensajeUnlockDb.Entity);
+                    break;
+
+                case "checkDbLock":
+                    SocketMsg<string> mensajeDbBusy = JsonConvert.DeserializeObject<SocketMsg<string>>(msg);
+                    checkDbLock(ref serverStreamWriter, mensajeDbBusy.Entity);
+                    break;
+
                 case "ObtenerVehiculosPorSucursal":
-                case "ValidarFechaReserva":
-                case "RealizarReserva":
-                case "ConsultarReservaPorCliente":
-                case "ConsultarReservaPorId":
+                    SocketMsg<string> mensajeObtenerVehiculosSucursal = JsonConvert.DeserializeObject<SocketMsg<string>>(msg);
+                    obtenerVehiculoSucursalClientRequest(ref serverStreamWriter, mensajeObtenerVehiculosSucursal.Entity);
+                    break;
+
+                case "CheckDisponibilidadVehiculo":
+                    SocketMsg<CheckReserva> mensajeCheckDisponibilidadVehiculo = JsonConvert.DeserializeObject<SocketMsg<CheckReserva>>(msg);
+                    checkDisponibilidadvehiculo(ref serverStreamWriter, mensajeCheckDisponibilidadVehiculo.Entity);
+                    break;
+
+                case "ObtenerVehiculoPorId":
+                    SocketMsg<string> mensajeObtenerVehiculoPorId = JsonConvert.DeserializeObject<SocketMsg<string>>(msg);
+                    obtenerVehiculoPorId(ref serverStreamWriter, mensajeObtenerVehiculoPorId.Entity);
+                    break;
+
+                case "ObtenerCoberturasPorTipoVehiculo":
+                    SocketMsg<int> mensajeObtenerCoberturaPorTipoVehiculo = JsonConvert.DeserializeObject<SocketMsg<int>>(msg);
+                    obtenerCoberturasPorTipoVehiculo(ref serverStreamWriter, mensajeObtenerCoberturaPorTipoVehiculo.Entity);
+                    break;
+
+                case "RegistrarReserva":
+                    SocketMsg<Reserva> mensajeRegistrarReserva = JsonConvert.DeserializeObject<SocketMsg<Reserva>>(msg);
+                    Reserva reserva = mensajeRegistrarReserva.Entity;
+                    reserva.Id = accesoDatos.GetNextReservaId();
+
+                    accesoDatos.Registrar(reserva);
+                    actualizarConsultaReservas();
+                    break;
+
+                case "ConsultarReservasPorCliente":
+                    SocketMsg<string> mensajeConsultarReservasPorCliente = JsonConvert.DeserializeObject<SocketMsg<string>>(msg);
+                    ConsultarReservasPorCliente(ref serverStreamWriter, mensajeConsultarReservasPorCliente.Entity);
+                    break;
                 default:
                     break;
 
             }
         }
 
-        private void clientConnect(string clientId)
+        private void clientConnect(ref StreamWriter serverStreamWriter, string clientId)
         {
-            textBoxServerBitacora.Invoke(writeToServerLog, new object[] { clientId + "se ha conectado." });
-            listBoxClientsConnected.Invoke(modifyServerListBox, new object[] { clientId, true });
+
+            if (accesoDatos.validarClienteId(clientId))
+            {
+                if (listBoxClientsConnected.Items.Contains(clientId))
+                {
+                    // No permite clientes duplicados (por ID)
+                    serverStreamWriter.WriteLine(JsonConvert.SerializeObject(-1));
+                    serverStreamWriter.Flush();
+                }
+                else
+                {
+                    // Conexion exitosa
+                    Cliente cliente = accesoDatos.ObtenerClientePorId(clientId);
+                    serverStreamWriter.WriteLine(JsonConvert.SerializeObject(1));
+                    serverStreamWriter.Flush();
+                    textBoxServerBitacora.Invoke(writeToServerLog, new object[] { clientId + " se ha conectado." });
+                    listBoxClientsConnected.Invoke(modifyServerListBox, new object[] { clientId, true });
+                }
+            }
+            else
+            {
+                // Cliente no paso la validacion de ID
+                serverStreamWriter.WriteLine(JsonConvert.SerializeObject(0));
+                serverStreamWriter.Flush();
+                textBoxServerBitacora.Invoke(writeToServerLog, new object[] { $"Cliente con el ID: {clientId} se ha intentado conectar pero el ID no esta registrado... Cerrando conexion" });
+            }
+
         }
 
         private void clientDisconnect(string clientId)
         {
-            textBoxServerBitacora.Invoke(writeToServerLog, new object[] { clientId + "se ha desconectado." });
+            textBoxServerBitacora.Invoke(writeToServerLog, new object[] { clientId + " se ha desconectado." });
             listBoxClientsConnected.Invoke(modifyServerListBox, new object[] { clientId, false });
         }
-        
+
+        private void obtenerInfoCliente(ref StreamWriter serverStreamWriter, string clientId)
+        {
+            Cliente cliente = accesoDatos.ObtenerClientePorId(clientId);
+
+            serverStreamWriter.WriteLine(JsonConvert.SerializeObject(cliente));
+            serverStreamWriter.Flush();
+        }
+
+        private void lockDb(string clientId)
+        {
+            dbBusy = true;
+            textBoxServerBitacora.Invoke(writeToServerLog, new object[] { $"Cliente con el ID: {clientId} ha solicitado acceso a la DB. Bloqueando accesos adicionales a la DB." });
+        }
+        private void checkDbLock(ref StreamWriter serverStreamWriter, string clientId)
+        {
+            serverStreamWriter.WriteLine(JsonConvert.SerializeObject(dbBusy));
+            serverStreamWriter.Flush();
+            textBoxServerBitacora.Invoke(writeToServerLog, new object[] { $"Cliente con el ID: {clientId} ha solicitado saber el estado de la DB. Estado actual {(dbBusy ? "utilizada" : "libre")}" });
+
+        }
+        private void unlockDb(string clientId)
+        {
+            dbBusy = false;
+            textBoxServerBitacora.Invoke(writeToServerLog, new object[] { $"Cliente con el ID: {clientId} ha terminado de usar la DB. Acceso a DB liberado" });
+        }
+        private void obtenerSucursalesClientRequest(ref StreamWriter serverStreamWriter)
+        {
+            List<Sucursal> listaSucursales = accesoDatos.ObtenerSucursalesConAsignacion();
+
+            serverStreamWriter.WriteLine(JsonConvert.SerializeObject(listaSucursales));
+            serverStreamWriter.Flush();
+        }
+
+        private void obtenerVehiculoSucursalClientRequest(ref StreamWriter serverStreamWriter, string sucursalNombre)
+        {
+            Sucursal sucursal = accesoDatos.ObtenerSucursalPorNombre(sucursalNombre);
+            List<VehiculoSucursal> listaAsignaciones = accesoDatos.ObtenerVehiculoSucursalPorSucursal(sucursal);
+            List<Vehiculo> listaVehiculos = new List<Vehiculo>();
+
+
+            foreach (VehiculoSucursal vehiculoSucursal in listaAsignaciones)
+            {
+                listaVehiculos.Add(accesoDatos.ObtenerVehiculoPorId(vehiculoSucursal.IdVehiculo));
+            }
+
+            serverStreamWriter.WriteLine(JsonConvert.SerializeObject(listaVehiculos));
+            serverStreamWriter.Flush();
+        }
+
+        private void checkDisponibilidadvehiculo(ref StreamWriter serverStreamWriter, CheckReserva checkReserva)
+        {
+            bool disponibilidad = accesoDatos.CheckDisponibilidad(checkReserva.idVehiculo, checkReserva.fechaInicio, checkReserva.fechaFin);
+
+            serverStreamWriter.WriteLine(JsonConvert.SerializeObject(disponibilidad));
+            serverStreamWriter.Flush();
+        }
+
+        private void obtenerVehiculoPorId(ref StreamWriter serverStreamWriter, string vehiculoId)
+        {
+            Vehiculo vehiculo = accesoDatos.ObtenerVehiculoPorId(vehiculoId);
+
+            serverStreamWriter.WriteLine(JsonConvert.SerializeObject(vehiculo));
+            serverStreamWriter.Flush();
+        }
+
+        private void obtenerCoberturasPorTipoVehiculo(ref StreamWriter serverStreamWriter, int tipoVehiculoId)
+        {
+            List<Cobertura> coberturas = accesoDatos.ObtenerCoberturaPorTipoVehiculo(tipoVehiculoId);
+
+            serverStreamWriter.WriteLine(JsonConvert.SerializeObject(coberturas));
+            serverStreamWriter.Flush();
+        }
+
+        private void ConsultarReservasPorCliente(ref StreamWriter serverStreamWriter, string clientId)
+        {
+            List<Reserva> reservasCliente = accesoDatos.ObtenerReservasPorCliente(clientId);
+
+            serverStreamWriter.WriteLine(JsonConvert.SerializeObject(reservasCliente));
+            serverStreamWriter.Flush();
+        }
         private void actualizarConsultas()
         {
             actualizarConsultaCliente();
@@ -981,18 +1175,8 @@ namespace server
             actualizarConsultaTipoVehiculo();
             actualizarConsultaCobertura();
             agregarAsignacionComboBox();
+            actualizarConsultaReservas();
         }
-
     }
 }
 
-public class CustomComboBoxItem
-{
-    public string Text { get; set; }
-    public object Value { get; set; }
-
-    public override string ToString()
-    {
-        return Text;
-    }
-}

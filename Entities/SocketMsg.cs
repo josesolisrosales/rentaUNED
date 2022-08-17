@@ -13,6 +13,13 @@ namespace Entities
     public class SocketMsg<T>
     {
         public string Method { get; set; }
-        public T entity { get; set; }
+        public T Entity { get; set; }
+    }
+
+    public struct CheckReserva
+    {
+        public string idVehiculo;
+        public DateTime fechaInicio;
+        public DateTime fechaFin;
     }
 }

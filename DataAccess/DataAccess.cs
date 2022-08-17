@@ -231,6 +231,42 @@ namespace DataAccess
                 return false;
             }
         }
+
+        public bool Registrar(Reserva reserva)
+        {
+            try
+            {
+                SqlConnection connection;
+                SqlCommand cmd = new SqlCommand();
+                string sql;
+
+                connection = new SqlConnection(connectionChain);
+                sql = "INSERT INTO RESERVA (IdReserva, IdCliente, IdPlaca, FechaReserva, FechaInicio, FechaFin, MontoReserva)" +
+                    "VALUES (@IdReserva, @IdCliente, @IdPlaca, @FechaReserva, @FechaInicio, @FechaFin, @MontoReserva)";
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = sql;
+                cmd.Connection = connection;
+
+                cmd.Parameters.AddWithValue("IdReserva", reserva.Id);
+                cmd.Parameters.AddWithValue("IdCliente", reserva.IdCliente);
+                cmd.Parameters.AddWithValue("IdPlaca", reserva.IdVehiculo);
+                cmd.Parameters.AddWithValue("FechaReserva", reserva.FechaReserva);
+                cmd.Parameters.AddWithValue("FechaInicio", reserva.FechaInicio);
+                cmd.Parameters.AddWithValue("FechaFin", reserva.FechaFin);
+                cmd.Parameters.AddWithValue("MontoReserva", reserva.Monto);
+
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
         public List<Cliente> ObtenerClientes()
         {
             List<Cliente> listaClientes = new List<Cliente>();
@@ -435,6 +471,60 @@ namespace DataAccess
             return ListaTipoVehiculos;
         }
 
+        public List<Reserva> ObtenerReservas()
+        {
+            List<Reserva> listaReserva = new List<Reserva>();
+
+            SqlConnection connection;
+            SqlCommand cmd = new SqlCommand();
+            string sql;
+            SqlDataReader reader;
+
+            connection = new SqlConnection(connectionChain);
+            sql = "SELECT * From RESERVA";
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = sql;
+            cmd.Connection = connection;
+
+            connection.Open();
+
+            reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    listaReserva.Add(new Reserva(
+                        id: reader.GetInt32(0),
+                        idCliente: reader.GetString(1),
+                        idVehiculo: reader.GetString(2),
+                        fechaReserva: reader.GetDateTime(3),
+                        fechaInicio: reader.GetDateTime(4),
+                        fechaFin: reader.GetDateTime(5),
+                        monto: reader.GetInt32(6)));
+                }
+            }
+
+            connection.Close();
+
+            return listaReserva;
+        }
+
+        public Vehiculo ObtenerVehiculoPorId(string id)
+        {
+            List<Vehiculo> listaVehiculos = ObtenerVehiculos();
+
+            foreach (Vehiculo vehiculo in listaVehiculos)
+            {
+                if (vehiculo.Id.Equals(id))
+                {
+                    return vehiculo;
+                }
+            }
+            return null;
+        }
+
         public List<VehiculoSucursal> ObtenerVehiculoSucursal()
         {
             List<VehiculoSucursal> ListaVehiculoSucursal = new List<VehiculoSucursal>();
@@ -472,6 +562,21 @@ namespace DataAccess
             return ListaVehiculoSucursal;
         }
 
+        public Cliente ObtenerClientePorId(string id)
+        {
+            List<Cliente> listaCliente = ObtenerClientes();
+
+            foreach (Cliente cliente in listaCliente)
+            {
+                if (cliente.Id == id)
+                {
+                    return cliente;
+                }
+            }
+
+            return null;
+        }
+
         public TipoVehiculo ObtenerTipoVehiculoPorId(int id)
         {
             foreach (TipoVehiculo tipoVehiculo in ObtenerTipoVehiculos())
@@ -484,25 +589,6 @@ namespace DataAccess
 
             return null;
         }
-
-        //public List<Vehiculo> ObtenerVehiculosWithAsignados()
-        //{
-        //    List<Vehiculo> listaVehiculo = ObtenerVehiculos();
-        //    List<VehiculoSucursal> listaVehiculoSucursal = ObtenerVehiculoSucursal();
-
-        //   foreach(VehiculoSucursal asignacion in listaVehiculoSucursal.ToList())
-        //    {
-        //        foreach(Vehiculo vehiculo in listaVehiculo)
-        //        {
-        //            if (asignacion.IdVehiculo == vehiculo.Id)
-        //            {
-        //                vehiculo.Asignado = true;
-        //            }
-        //        }
-        //    }
-
-        //    return listaVehiculo;
-        //}
 
         public List<Sucursal> ObtenerSucursalesConAsignacion()
         {
@@ -555,11 +641,96 @@ namespace DataAccess
             return null;
         }
 
+        public Sucursal ObtenerSucursalPorNombre(string nombre)
+        {
+            foreach (Sucursal sucursal in ObtenerSucursales())
+            {
+                if (sucursal.Nombre.Equals(nombre))
+                {
+                    return sucursal;
+                }
+            }
+
+            return null;
+        }
+
+        public List<Cobertura> ObtenerCoberturaPorTipoVehiculo(int tipoVehiculoId)
+        {
+            List<Cobertura> coberturas = ObtenerCoberturas();
+            List<Cobertura> coberturasPorTipoVehiculo = new List<Cobertura>();
+            
+            foreach (Cobertura cobertura in coberturas)
+            {
+                if (cobertura.TipoVehiculo.Id.Equals(tipoVehiculoId))
+                {
+                    coberturasPorTipoVehiculo.Add(cobertura);
+                }
+            }
+
+            return coberturasPorTipoVehiculo;
+            
+        }
+
+        public List<Reserva> ObtenerReservasPorCliente(string clientId)
+        {
+            List<Reserva> reservas = ObtenerReservas();
+            List<Reserva> reservasCliente = new List<Reserva>();
+
+            foreach (Reserva reserva in reservas)
+            {
+                if (reserva.IdCliente.Equals(clientId))
+                {
+                    reservasCliente.Add(reserva);
+                }
+            }
+
+            return reservasCliente;
+        }
+
+        public bool validarClienteId(string id)
+        {
+            List<Cliente> listaCliente = ObtenerClientes();
+            
+            foreach (Cliente cliente in listaCliente)
+            {
+                if (cliente.Id.Equals(id))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         public int GetNextAsignacionId()
         {
             List <VehiculoSucursal> listaVehiculoSucursal= ObtenerVehiculoSucursal();
 
             return listaVehiculoSucursal.Count + 1;
+        }
+
+        public int GetNextReservaId()
+        {
+            List<Reserva> listaReservas = ObtenerReservas();
+            return listaReservas.Count + 1;
+        }
+
+        public bool CheckDisponibilidad(string vehiculoId, DateTime fechaInicio, DateTime fechaFin)
+        {
+            List<Reserva> listaReservas = ObtenerReservas();
+
+            foreach (Reserva reserva in listaReservas)
+            {
+                if (reserva.IdVehiculo.Equals(vehiculoId))
+                {
+                    if (fechaInicio <= reserva.FechaFin && reserva.FechaInicio <= fechaFin)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
         }
     }
 }

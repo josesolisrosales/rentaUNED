@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -45,6 +41,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlConsultas = new System.Windows.Forms.TabControl();
             this.tabConsultarSucursal = new System.Windows.Forms.TabPage();
             this.dataGridViewConsultaSucursal = new System.Windows.Forms.DataGridView();
@@ -56,6 +58,7 @@
             this.dataGridViewConsultaTipoVehiculo = new System.Windows.Forms.DataGridView();
             this.dataGridViewConsultaVehiculo = new System.Windows.Forms.DataGridView();
             this.tabConsultarVehiculoSucursal = new System.Windows.Forms.TabPage();
+            this.dataGridConsultaVehiculoSucursalDetalles = new System.Windows.Forms.DataGridView();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.comboBoxConsultaSucursalVehiculo = new System.Windows.Forms.ComboBox();
@@ -149,7 +152,8 @@
             this.errorProviderVehiculo = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderVehiculoSucursal = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderCobertura = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dataGridConsultaVehiculoSucursalDetalles = new System.Windows.Forms.DataGridView();
+            this.tabPageConsultasReservas = new System.Windows.Forms.TabPage();
+            this.dataGridViewReservas = new System.Windows.Forms.DataGridView();
             this.tabControlConsultas.SuspendLayout();
             this.tabConsultarSucursal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaSucursal)).BeginInit();
@@ -159,6 +163,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaTipoVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaVehiculo)).BeginInit();
             this.tabConsultarVehiculoSucursal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridConsultaVehiculoSucursalDetalles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaVehiculoSucursalVehiculos)).BeginInit();
             this.tabPageConsultaCobertura.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaCoberturas)).BeginInit();
@@ -184,7 +189,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculoSucursal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCobertura)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridConsultaVehiculoSucursalDetalles)).BeginInit();
+            this.tabPageConsultasReservas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservas)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlConsultas
@@ -194,6 +200,7 @@
             this.tabControlConsultas.Controls.Add(this.tabConsultarVehiculo);
             this.tabControlConsultas.Controls.Add(this.tabConsultarVehiculoSucursal);
             this.tabControlConsultas.Controls.Add(this.tabPageConsultaCobertura);
+            this.tabControlConsultas.Controls.Add(this.tabPageConsultasReservas);
             this.tabControlConsultas.Location = new System.Drawing.Point(4, 493);
             this.tabControlConsultas.Name = "tabControlConsultas";
             this.tabControlConsultas.SelectedIndex = 0;
@@ -220,23 +227,23 @@
             this.dataGridViewConsultaSucursal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewConsultaSucursal.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewConsultaSucursal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaSucursal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaSucursal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridViewConsultaSucursal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaSucursal.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaSucursal.DefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridViewConsultaSucursal.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewConsultaSucursal.Location = new System.Drawing.Point(4, 7);
             this.dataGridViewConsultaSucursal.Name = "dataGridViewConsultaSucursal";
@@ -265,23 +272,23 @@
             this.dataGridViewConsultaCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewConsultaCliente.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewConsultaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridViewConsultaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaCliente.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaCliente.DefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridViewConsultaCliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewConsultaCliente.Location = new System.Drawing.Point(6, 7);
             this.dataGridViewConsultaCliente.Name = "dataGridViewConsultaCliente";
@@ -333,23 +340,23 @@
             this.dataGridViewConsultaTipoVehiculo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewConsultaTipoVehiculo.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewConsultaTipoVehiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaTipoVehiculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaTipoVehiculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridViewConsultaTipoVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaTipoVehiculo.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaTipoVehiculo.DefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridViewConsultaTipoVehiculo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewConsultaTipoVehiculo.Location = new System.Drawing.Point(960, 59);
             this.dataGridViewConsultaTipoVehiculo.Name = "dataGridViewConsultaTipoVehiculo";
@@ -367,23 +374,23 @@
             this.dataGridViewConsultaVehiculo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewConsultaVehiculo.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewConsultaVehiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaVehiculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaVehiculo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridViewConsultaVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaVehiculo.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaVehiculo.DefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridViewConsultaVehiculo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewConsultaVehiculo.Location = new System.Drawing.Point(6, 59);
             this.dataGridViewConsultaVehiculo.Name = "dataGridViewConsultaVehiculo";
@@ -407,11 +414,45 @@
             this.tabConsultarVehiculoSucursal.Text = "Consultar Vehículo por Sucursal";
             this.tabConsultarVehiculoSucursal.UseVisualStyleBackColor = true;
             // 
+            // dataGridConsultaVehiculoSucursalDetalles
+            // 
+            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToAddRows = false;
+            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToDeleteRows = false;
+            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToResizeColumns = false;
+            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToResizeRows = false;
+            this.dataGridConsultaVehiculoSucursalDetalles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridConsultaVehiculoSucursalDetalles.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridConsultaVehiculoSucursalDetalles.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridConsultaVehiculoSucursalDetalles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            this.dataGridConsultaVehiculoSucursalDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridConsultaVehiculoSucursalDetalles.DefaultCellStyle = dataGridViewCellStyle30;
+            this.dataGridConsultaVehiculoSucursalDetalles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridConsultaVehiculoSucursalDetalles.Location = new System.Drawing.Point(1036, 43);
+            this.dataGridConsultaVehiculoSucursalDetalles.Name = "dataGridConsultaVehiculoSucursalDetalles";
+            this.dataGridConsultaVehiculoSucursalDetalles.ReadOnly = true;
+            this.dataGridConsultaVehiculoSucursalDetalles.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridConsultaVehiculoSucursalDetalles.Size = new System.Drawing.Size(494, 410);
+            this.dataGridConsultaVehiculoSucursalDetalles.TabIndex = 25;
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label24.Location = new System.Drawing.Point(481, 17);
+            this.label24.Location = new System.Drawing.Point(392, 15);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(196, 25);
             this.label24.TabIndex = 24;
@@ -423,18 +464,18 @@
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label23.Location = new System.Drawing.Point(6, 15);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(443, 25);
+            this.label23.Size = new System.Drawing.Size(225, 25);
             this.label23.TabIndex = 22;
-            this.label23.Text = "Seleccione una asignación para mostrar los datos";
+            this.label23.Text = "Seleccione una sucursal";
             // 
             // comboBoxConsultaSucursalVehiculo
             // 
             this.comboBoxConsultaSucursalVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxConsultaSucursalVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBoxConsultaSucursalVehiculo.FormattingEnabled = true;
-            this.comboBoxConsultaSucursalVehiculo.Location = new System.Drawing.Point(11, 43);
+            this.comboBoxConsultaSucursalVehiculo.Location = new System.Drawing.Point(6, 43);
             this.comboBoxConsultaSucursalVehiculo.Name = "comboBoxConsultaSucursalVehiculo";
-            this.comboBoxConsultaSucursalVehiculo.Size = new System.Drawing.Size(246, 28);
+            this.comboBoxConsultaSucursalVehiculo.Size = new System.Drawing.Size(383, 28);
             this.comboBoxConsultaSucursalVehiculo.TabIndex = 21;
             this.comboBoxConsultaSucursalVehiculo.SelectedValueChanged += new System.EventHandler(this.comboBoxConsultaSucursalVehiculo_SelectedValueChanged);
             // 
@@ -447,29 +488,29 @@
             this.dataGridViewConsultaVehiculoSucursalVehiculos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewConsultaVehiculoSucursalVehiculos.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewConsultaVehiculoSucursalVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaVehiculoSucursalVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaVehiculoSucursalVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.dataGridViewConsultaVehiculoSucursalVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaVehiculoSucursalVehiculos.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaVehiculoSucursalVehiculos.DefaultCellStyle = dataGridViewCellStyle32;
             this.dataGridViewConsultaVehiculoSucursalVehiculos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridViewConsultaVehiculoSucursalVehiculos.Location = new System.Drawing.Point(486, 43);
+            this.dataGridViewConsultaVehiculoSucursalVehiculos.Location = new System.Drawing.Point(397, 43);
             this.dataGridViewConsultaVehiculoSucursalVehiculos.Name = "dataGridViewConsultaVehiculoSucursalVehiculos";
             this.dataGridViewConsultaVehiculoSucursalVehiculos.ReadOnly = true;
             this.dataGridViewConsultaVehiculoSucursalVehiculos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewConsultaVehiculoSucursalVehiculos.Size = new System.Drawing.Size(509, 412);
+            this.dataGridViewConsultaVehiculoSucursalVehiculos.Size = new System.Drawing.Size(598, 412);
             this.dataGridViewConsultaVehiculoSucursalVehiculos.TabIndex = 1;
             // 
             // tabPageConsultaCobertura
@@ -492,23 +533,23 @@
             this.dataGridViewConsultaCoberturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewConsultaCoberturas.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewConsultaCoberturas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewConsultaCoberturas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewConsultaCoberturas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.dataGridViewConsultaCoberturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewConsultaCoberturas.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewConsultaCoberturas.DefaultCellStyle = dataGridViewCellStyle34;
             this.dataGridViewConsultaCoberturas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewConsultaCoberturas.Location = new System.Drawing.Point(0, 6);
             this.dataGridViewConsultaCoberturas.Name = "dataGridViewConsultaCoberturas";
@@ -568,23 +609,23 @@
             // 
             this.dataGridViewVehiculoSucursalVehiculos.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewVehiculoSucursalVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewVehiculoSucursalVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewVehiculoSucursalVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
             this.dataGridViewVehiculoSucursalVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewVehiculoSucursalVehiculos.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewVehiculoSucursalVehiculos.DefaultCellStyle = dataGridViewCellStyle36;
             this.dataGridViewVehiculoSucursalVehiculos.Location = new System.Drawing.Point(263, 47);
             this.dataGridViewVehiculoSucursalVehiculos.Name = "dataGridViewVehiculoSucursalVehiculos";
             this.dataGridViewVehiculoSucursalVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1381,6 +1422,7 @@
             // buttonServerStop
             // 
             this.buttonServerStop.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonServerStop.Enabled = false;
             this.buttonServerStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.buttonServerStop.Location = new System.Drawing.Point(137, 19);
             this.buttonServerStop.Name = "buttonServerStop";
@@ -1388,6 +1430,7 @@
             this.buttonServerStop.TabIndex = 35;
             this.buttonServerStop.Text = "Detener";
             this.buttonServerStop.UseVisualStyleBackColor = false;
+            this.buttonServerStop.Click += new System.EventHandler(this.buttonServerStop_Click);
             // 
             // buttonServerStart
             // 
@@ -1399,6 +1442,7 @@
             this.buttonServerStart.TabIndex = 34;
             this.buttonServerStart.Text = "Iniciar";
             this.buttonServerStart.UseVisualStyleBackColor = false;
+            this.buttonServerStart.Click += new System.EventHandler(this.buttonServerStart_Click);
             // 
             // errorProviderSucursal
             // 
@@ -1430,39 +1474,50 @@
             this.errorProviderCobertura.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderCobertura.ContainerControl = this;
             // 
-            // dataGridConsultaVehiculoSucursalDetalles
+            // tabPageConsultasReservas
             // 
-            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToAddRows = false;
-            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToDeleteRows = false;
-            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToResizeColumns = false;
-            this.dataGridConsultaVehiculoSucursalDetalles.AllowUserToResizeRows = false;
-            this.dataGridConsultaVehiculoSucursalDetalles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridConsultaVehiculoSucursalDetalles.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridConsultaVehiculoSucursalDetalles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridConsultaVehiculoSucursalDetalles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
-            this.dataGridConsultaVehiculoSucursalDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridConsultaVehiculoSucursalDetalles.DefaultCellStyle = dataGridViewCellStyle32;
-            this.dataGridConsultaVehiculoSucursalDetalles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridConsultaVehiculoSucursalDetalles.Location = new System.Drawing.Point(1036, 43);
-            this.dataGridConsultaVehiculoSucursalDetalles.Name = "dataGridConsultaVehiculoSucursalDetalles";
-            this.dataGridConsultaVehiculoSucursalDetalles.ReadOnly = true;
-            this.dataGridConsultaVehiculoSucursalDetalles.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridConsultaVehiculoSucursalDetalles.Size = new System.Drawing.Size(494, 410);
-            this.dataGridConsultaVehiculoSucursalDetalles.TabIndex = 25;
+            this.tabPageConsultasReservas.Controls.Add(this.dataGridViewReservas);
+            this.tabPageConsultasReservas.Location = new System.Drawing.Point(4, 22);
+            this.tabPageConsultasReservas.Name = "tabPageConsultasReservas";
+            this.tabPageConsultasReservas.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageConsultasReservas.Size = new System.Drawing.Size(1539, 461);
+            this.tabPageConsultasReservas.TabIndex = 6;
+            this.tabPageConsultasReservas.Text = "Consultar Reservas";
+            this.tabPageConsultasReservas.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewReservas
+            // 
+            this.dataGridViewReservas.AllowUserToAddRows = false;
+            this.dataGridViewReservas.AllowUserToDeleteRows = false;
+            this.dataGridViewReservas.AllowUserToResizeColumns = false;
+            this.dataGridViewReservas.AllowUserToResizeRows = false;
+            this.dataGridViewReservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewReservas.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewReservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewReservas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridViewReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewReservas.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridViewReservas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridViewReservas.Location = new System.Drawing.Point(6, 7);
+            this.dataGridViewReservas.Name = "dataGridViewReservas";
+            this.dataGridViewReservas.ReadOnly = true;
+            this.dataGridViewReservas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridViewReservas.Size = new System.Drawing.Size(1526, 446);
+            this.dataGridViewReservas.TabIndex = 0;
             // 
             // UIServer
             // 
@@ -1472,7 +1527,7 @@
             this.Controls.Add(this.tabControlConsultas);
             this.Controls.Add(this.mainTabControl);
             this.Name = "UIServer";
-            this.Text = "RUI Administrador";
+            this.Text = "Renta UNED Administrador";
             this.tabControlConsultas.ResumeLayout(false);
             this.tabConsultarSucursal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaSucursal)).EndInit();
@@ -1484,6 +1539,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaVehiculo)).EndInit();
             this.tabConsultarVehiculoSucursal.ResumeLayout(false);
             this.tabConsultarVehiculoSucursal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridConsultaVehiculoSucursalDetalles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaVehiculoSucursalVehiculos)).EndInit();
             this.tabPageConsultaCobertura.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultaCoberturas)).EndInit();
@@ -1516,7 +1572,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVehiculoSucursal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCobertura)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridConsultaVehiculoSucursalDetalles)).EndInit();
+            this.tabPageConsultasReservas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReservas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1628,6 +1685,8 @@
         private System.Windows.Forms.DataGridView dataGridViewConsultaTipoVehiculo;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.DataGridView dataGridConsultaVehiculoSucursalDetalles;
+        private System.Windows.Forms.TabPage tabPageConsultasReservas;
+        private System.Windows.Forms.DataGridView dataGridViewReservas;
     }
 }
 
