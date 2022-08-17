@@ -104,7 +104,13 @@ namespace Client
 
         private void UIClient_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ClientTCP.Disconnect(textBoxClientId.Text);
+            try
+            {
+                ClientTCP.Disconnect(textBoxClientId.Text);
+
+            }
+            catch (Exception ex)
+            { }
         }
     }
 }
